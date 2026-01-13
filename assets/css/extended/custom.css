@@ -34,3 +34,42 @@
   margin: 0.2rem 0 0.4rem;
 }
 
+/*折叠框架更有notion味儿*/
+details {
+    padding: 5px 10px;
+    background: rgba(128, 128, 128, 0.05);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+details[open] {
+    background: rgba(128, 128, 128, 0.1);
+}
+
+summary {
+    list-style: none; /* 隐藏默认箭头 */
+    display: flex;
+    align-items: center;
+}
+
+/* 自定义 Notion 风格的小三角 */
+summary::before {
+    content: '▶';
+    display: inline-block;
+    font-size: 10px;
+    margin-right: 10px;
+    transition: transform 0.2s;
+}
+
+details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+/* 给所有在新窗口打开的链接后加一个外链小图标 */
+a[target="_blank"]::after {
+    content: " ↗";
+    font-size: 0.8em;
+    vertical-align: super;
+    opacity: 0.6;
+}

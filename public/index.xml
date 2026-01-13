@@ -11,32 +11,14 @@
     </image>
     <generator>Hugo -- 0.154.2</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 07 Jan 2026 15:45:12 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 13 Jan 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Post</title>
+      <title>👋Hello World!｜hugo papermod主题搭建&#43;装修01</title>
       <link>http://localhost:1313/posts/my-first-post/</link>
       <pubDate>Wed, 07 Jan 2026 15:45:12 +0900</pubDate>
       <guid>http://localhost:1313/posts/my-first-post/</guid>
-      <description>&lt;p&gt;here is my first post!&lt;/p&gt;
-&lt;p&gt;我正在慢慢装修我的blog，目前是本地的状态。&lt;/p&gt;
-&lt;p&gt;敬请期待😚&lt;/p&gt;
-&lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/demo.jpeg&#34;
-         alt=&#34;（拍摄于东京，2026年1月）&#34; width=&#34;50%&#34;/&gt; &lt;figcaption&gt;
-            &lt;p&gt;（拍摄于东京，2026年1月）&lt;/p&gt;
-        &lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; mkdir -p static/img
- cat &amp;lt;&amp;lt; &amp;#39;EOF&amp;#39; &amp;gt; static/img/code-header.svg
- &amp;lt;svg xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34; version=&amp;#34;1.1&amp;#34;  x=&amp;#34;0px&amp;#34; y=&amp;#34;0px&amp;#34; width=&amp;#34;450px&amp;#34; height=&amp;#34;130px&amp;#34;&amp;gt;
-    &amp;lt;ellipse cx=&amp;#34;65&amp;#34; cy=&amp;#34;65&amp;#34; rx=&amp;#34;50&amp;#34; ry=&amp;#34;52&amp;#34; stroke=&amp;#34;rgb(220,60,54)&amp;#34; stroke-width=&amp;#34;2&amp;#34; fill=&amp;#34;rgb(237,108,96)&amp;#34;/&amp;gt;
-    &amp;lt;ellipse cx=&amp;#34;225&amp;#34; cy=&amp;#34;65&amp;#34; rx=&amp;#34;50&amp;#34; ry=&amp;#34;52&amp;#34;  stroke=&amp;#34;rgb(218,151,33)&amp;#34; stroke-width=&amp;#34;2&amp;#34; fill=&amp;#34;rgb(247,193,81)&amp;#34;/&amp;gt;
-    &amp;lt;ellipse cx=&amp;#34;385&amp;#34; cy=&amp;#34;65&amp;#34; rx=&amp;#34;50&amp;#34; ry=&amp;#34;52&amp;#34;  stroke=&amp;#34;rgb(27,161,37)&amp;#34; stroke-width=&amp;#34;2&amp;#34; fill=&amp;#34;rgb(100,200,86)&amp;#34;/&amp;gt;
-    &amp;lt;/svg&amp;gt;
-    EOF
-&lt;/code&gt;&lt;/pre&gt;</description>
+      <description>&lt;p&gt;记录下代码0基础的blog搭建步骤，和（成功/想要）实现的功能。&lt;/p&gt;</description>
     </item>
     <item>
       <title>links</title>

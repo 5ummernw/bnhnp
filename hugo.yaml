@@ -4,7 +4,7 @@ title: bnhnp
 theme: PaperMod
 
 pagination.pagerSize: 5 #一页显示5篇文章，paginate改了
-summaryLength: 140 # 文章概览的自字数，默认70
+summaryLength: 20 # 文章概览的自字数，默认70
 
 enableRobotsTXT: true #允许爬虫抓取到搜索引擎，
 enableEmoji: true #要表情

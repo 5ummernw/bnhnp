@@ -1,30 +1,18 @@
 ---
 date: '2026-01-07T15:45:12+09:00'
 draft: false
-title: 'My First Post'
-tags: [搭建]
+title: '👋Hello World!｜hugo papermod主题搭建+装修01'
+lastmod: '2026-01-13T00:00:00+09:00'
+tags: [blog装修]
 ---
 
-here is my first post!
+记录下代码0基础的blog搭建步骤，和（成功/想要）实现的功能。
 
-我正在慢慢装修我的blog，目前是本地的状态。
+{{< collapse title="碎碎念（点击展开）" >}}
+1.零基础搭自己的blog网站太难了。经常为了实现一个功能搜很多文章+AI老师反复修改。一个晚上能改好一个功能很不容易，当然也很棒。
 
-敬请期待😚
+2.为什么要建自己的blog有好几个原因。第一，觉得有自己的博客很酷；第二，看了[椒盐豆豉老师的文章](https://blog.douchi.space/2023-why-you-need-a-blog/#gsc.tab=0)，总结回顾和塑造自己；第三，工作是转码，提前用自己感兴趣的方式接触下代码；第四 想要在一个不受审查和算法的地方生长……
+{{< /collapse >}}
 
 
-{{< figure 
-    src="/images/demo.jpeg"
-    caption="（拍摄于东京，2026年1月）"
-    width="50%"
->}}
-
-```
- mkdir -p static/img
- cat << 'EOF' > static/img/code-header.svg
- <svg xmlns="http://www.w3.org/2000/svg" version="1.1"  x="0px" y="0px" width="450px" height="130px">
-    <ellipse cx="65" cy="65" rx="50" ry="52" stroke="rgb(220,60,54)" stroke-width="2" fill="rgb(237,108,96)"/>
-    <ellipse cx="225" cy="65" rx="50" ry="52"  stroke="rgb(218,151,33)" stroke-width="2" fill="rgb(247,193,81)"/>
-    <ellipse cx="385" cy="65" rx="50" ry="52"  stroke="rgb(27,161,37)" stroke-width="2" fill="rgb(100,200,86)"/>
-    </svg>
-    EOF
-```
+奋笔疾书中...

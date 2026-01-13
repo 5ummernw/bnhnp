@@ -1,0 +1,36 @@
+/* 全站文章里的图片和图注居中 */
+.post-content figure {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post-content figure img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Footer runtime: match PaperMod footer/copyright style */
+.footer-runtime {
+  text-align: center;
+  font-size: 0.65em;      /* 跟 footer 接近 */
+  color: var(--secondary);
+  margin: 0.4rem 0 0.2rem;
+  line-height: 1.6;
+}
+
+.footer-runtime span {
+  font-weight: 600;
+  color: var(--secondary); /* 想更醒目就改成 var(--primary) */
+}
+
+/* 全体字数统计 */
+.footer-totalcount{
+  text-align: center;
+  font-size: 0.65em;
+  color: var(--secondary);
+  line-height: 1.6;
+  margin: 0.2rem 0 0.4rem;
+}
+

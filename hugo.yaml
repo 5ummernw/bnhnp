@@ -1,0 +1,169 @@
+baseURL: https://example.org/
+languageCode: #zh #en-us
+title: bnhnp
+theme: PaperMod
+
+pagination.pagerSize: 5 #一页显示5篇文章，paginate改了
+summaryLength: 140 # 文章概览的自字数，默认70
+
+enableRobotsTXT: true #允许爬虫抓取到搜索引擎，
+enableEmoji: true #要表情
+hasCJKLanguage: true # 自动检测是否包含 中文日文韩文 如果文章中使用了很多中文引号的话可以开启
+
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true #把输出的 HTML / CSS / JS 压缩（变短、去空格）
+
+defaultContentLanguage: zh # 最顶部首先展示的语言页面
+defaultContentLanguageInSubdir: false
+
+#搜索功能
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: ExampleSite
+  description: "ExampleSite description"
+  keywords: [Blog, Portfolio, PaperMod]
+  author: Rey
+  # author: ["Me", "You"] # multiple authors 显示作者
+  images: ["<link or path of image for opengraph, twitter-cards>"]
+  
+  DateFormat: "2006/01/02" #日期显示
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  VisitCount: true
+  ShowLastMod: true #显示文章更新时间
+  ShowRssButtonInSectionTermList: false
+  showtoc: true #显示目录
+  tocopen: false #自动展开目录
+
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "<link / abs url>"
+    favicon16x16: "<link / abs url>"
+    favicon32x32: "<link / abs url>"
+    apple_touch_icon: "<link / abs url>"
+    safari_pinned_tab: "<link / abs url>"
+
+  label: #左上角图标
+    text: "bnhnp"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: false # needs to be explicitly set
+    title: ExampleSite
+    subtitle: "This is subtitle"
+    imageUrl: "<img location>"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Good morning, everyone👋"
+    Content: |
+      写给自己的blog，也想和人产生碰撞
+
+      住在日本
+      
+      “人群是一个幻觉。它并不存在。”
+    
+      欢迎点击下方mastodon交换友链
+
+  #homeinfo下的SNS图标，
+  socialIcons:
+    - name: mastodon
+      url: "https://mastodon.social/@summernw33"
+    #- name: github
+     # url: "https://github.com/"
+
+  analytics:
+    google:
+      SiteVerificationTag: ""
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  # PaperMod 主题自带的「编辑/建议修改」入口
+  # editPost: 
+    # URL: "https://github.com/<path_to_repo>/content"
+    # Text: "Suggest Changes" # edit text
+    # appendFilePath: true # to append file path to Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+  since: 2026-1-6
+
+menu:
+  main:
+    - identifier: search
+      name: search
+      url: search
+      weight: 10
+    - identifier: archives
+      name: archives
+      url: archives
+      weight: 20
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 30
+    - identifier: links
+      name: 🤝links
+      url: links
+      weight: 40
+
+StartYear: 2026 # 底部开始年份
+
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai

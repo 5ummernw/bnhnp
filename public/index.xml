@@ -11,21 +11,43 @@
     </image>
     <generator>Hugo -- 0.154.2</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 13 Jan 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 16 Jan 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>👋Hello World!｜hugo papermod主题搭建&#43;装修01</title>
       <link>http://localhost:1313/posts/my-first-post/</link>
       <pubDate>Wed, 07 Jan 2026 15:45:12 +0900</pubDate>
       <guid>http://localhost:1313/posts/my-first-post/</guid>
-      <description>&lt;p&gt;记录下代码0基础的blog搭建步骤，和（成功/想要）实现的功能。&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;0前言&#34;&gt;0前言&lt;/h2&gt;
+&lt;p&gt;记录下代码0基础的blog搭建步骤，和（成功/想要）实现的功能。&lt;/p&gt;</description>
     </item>
     <item>
       <title>links</title>
       <link>http://localhost:1313/links/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/links/</guid>
-      <description></description>
+      <description>&lt;p&gt;下面是我常翻的网站：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://seahorseplanet.net&#34; 
+    
+    
+      target=&#34;_blank&#34; rel=&#34;noopener&#34; 
+   &gt;
+   海马星球
+&lt;/a&gt;&lt;/p&gt;
+&lt;!-- &lt;div class=&#34;friend&#34;&gt;
+
+&lt;!-- &lt;a target=&#34;_blank&#34; href=https://thirdshire.com title=第三夏尔 class=&#34;friendurl&#34;&gt;
+  &lt;div class=&#34;frienddiv&#34;&gt;
+    &lt;div class=&#34;frienddivleft&#34;&gt;
+      &lt;img class=&#34;myfriend&#34; src=https://thirdshire.com/blackcat_avatar.jpg /&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;frienddivright&#34;&gt;
+      &lt;div class=&#34;friendname&#34;&gt;第三夏尔&lt;/div&gt;
+      &lt;div class=&#34;friendinfo&#34;&gt;认真生活，积极摸鱼&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/a&gt; --&gt;
+&lt;!-- &lt;/div&gt; --&gt;</description>
     </item>
   </channel>
 </rss>

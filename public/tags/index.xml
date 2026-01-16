@@ -20,5 +20,12 @@
       <guid>http://localhost:1313/tags/blog%E8%A3%85%E4%BF%AE/</guid>
       <description></description>
     </item>
+    <item>
+      <title>码农笔记</title>
+      <link>http://localhost:1313/tags/%E7%A0%81%E5%86%9C%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 07 Jan 2026 15:45:12 +0900</pubDate>
+      <guid>http://localhost:1313/tags/%E7%A0%81%E5%86%9C%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

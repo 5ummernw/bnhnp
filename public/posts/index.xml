@@ -18,7 +18,8 @@
       <link>http://localhost:1313/posts/my-first-post/</link>
       <pubDate>Wed, 07 Jan 2026 15:45:12 +0900</pubDate>
       <guid>http://localhost:1313/posts/my-first-post/</guid>
-      <description>&lt;p&gt;记录下代码0基础的blog搭建步骤，和（成功/想要）实现的功能。&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;0前言&#34;&gt;0前言&lt;/h2&gt;
+&lt;p&gt;记录下代码0基础的blog搭建步骤，和（成功/想要）实现的功能。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

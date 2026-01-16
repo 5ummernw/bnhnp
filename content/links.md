@@ -10,11 +10,13 @@ comments: true
 reward: false
 showbreadcrumbs: false
 ---
-<!-- 
-<div class="friend">
+下面是我常翻的网站：
 
-{{< friend name="Sulv's Blog" url="https://www.sulvblog.cn" logo="https://thirdshire.com/blackcat_avatar.jpg" word="一个记录技术、阅读、生活的博客" >}}
+ [海马星球](https://seahorseplanet.net)
+
+<!-- <div class="friend">
+
+<!-- {{< links name="第三夏尔" url="https://thirdshire.com" logo="https://thirdshire.com/blackcat_avatar.jpg" word="认真生活，积极摸鱼" >}} -->
 
 
-</div>
-这是 HTML 注释 -->
+<!-- </div> --> 

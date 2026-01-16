@@ -66,10 +66,68 @@ details[open] summary::before {
     transform: rotate(90deg);
 }
 
-/* 给所有在新窗口打开的链接后加一个外链小图标 */
-a[target="_blank"]::after {
-    content: " ↗";
+/* 仅在文章详情页的正文内容中，为外链添加小箭头 
+   如果你也不希望“脚注”或者“评论区”出现箭头，
+   .post-content 这个类名已经非常精确地限制在文章正文了 */
+.post-content a[href^="http"]:not([href*="localhost"]):not([href*="bnhnp.netlify.com"])::after {
+    content: "↗";
     font-size: 0.8em;
     vertical-align: super;
     opacity: 0.6;
+    margin-left: 2px;
 }
+
+/*调整字体大小和行间距等*/
+:root {
+    /* 1. 调整全局字体大小（默认通常是 18px 或更高） */
+    --content-font-size: 12px; 
+
+    /* 2. 调整行间距 (Line Height) */
+    /* 默认通常是 1.6 或 1.8，中文建议 1.5 - 1.6 比较紧凑 */
+    --line-height: 1.5;
+}
+
+/* 3. 如果想针对正文段落间距进一步微调 */
+.post-content p {
+    margin-bottom: 8px; /* 段落之间的距离 */
+}
+
+
+
+/*修改字体
+字体回退机制” (Font Stack)，在用户电脑从左到右依次寻找
+不推荐制定字体，因为网页加载速度很变慢
+*/
+body {
+    font-family: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.post-content {
+    text-align: left;           /* 取消两端对齐 */
+    word-break: break-word;     /* 允许单词内换行，防止长单词撑破布局 */
+    line-height: 1.8;           /* 适当增加行高，提升中文阅读体验 */
+    letter-spacing: 0.02em;     /* 微调字间距，让中文看起来不那么局促 */
+}
+
+.post-content p {
+    /* 调整段落之间的上下间距 */
+    /* 第一个值 1.5rem 是上下间距，第二个值 0 是左右间距 */
+    margin: 1rem 0; 
+}
+
+/* 1. 隐藏目录中所有的列表圆点 */
+.toc ul {
+    list-style-type: none; /* 去掉圆点 */
+    padding-inline-start: 0px; /* 保留层级缩进感 */
+}
+
+/* 2. 移除最外层的缩进，让目录整体靠左对齐 */
+.toc > div > ul {
+    padding-inline-start: 0;
+}
+
+/* 3. (可选) 让目录链接在鼠标悬停时更有质感 
+/* .toc a:hover {
+    color: var(--primary); /* 悬停时显示主色调 */
+    /*text-decoration: underline; /* 增加下划线 */
+/*} */

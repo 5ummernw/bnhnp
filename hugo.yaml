@@ -1,22 +1,27 @@
+#基础信息区（身份证明），你是谁，在哪里
 baseURL: https://bnhnp.netlify.app/
 languageCode: #zh #en-us
 title: bnhnp
 theme: PaperMod
 
+#页面排版区
 pagination.pagerSize: 5 #一页显示5篇文章，paginate改了
 summaryLength: 20 # 文章概览的自字数，默认70
-
-enableRobotsTXT: true #允许爬虫抓取到搜索引擎，
 enableEmoji: true #要表情
-hasCJKLanguage: true # 自动检测是否包含 中文日文韩文 如果文章中使用了很多中文引号的话可以开启
+hasCJKLanguage: true #自动检测是否包含中文日文韩文，让字数统计预览更准确
 
-buildDrafts: false
-buildFuture: false
-buildExpired: false
+frontmatter:
+  lastmod: ["lastmod", ":git", "date", "publishDate"]
 
-minify:
+#打包优化区（幕后工作）
+minify:              #“压土机”，把网页代码里的空格、换行都删掉，让网页文件变小，这样别人打开你网站的速度会更快。
   disableXML: true
   minifyOutput: true #把输出的 HTML / CSS / JS 压缩（变短、去空格）
+buildDrafts: false
+
+enableRobotsTXT: true #允许爬虫抓取到搜索引擎，
+buildFuture: false
+buildExpired: false
 
 defaultContentLanguage: zh # 最顶部首先展示的语言页面
 defaultContentLanguageInSubdir: false
@@ -28,51 +33,52 @@ outputs:
     - RSS
     - JSON
 
+#细节装修区，最核心设置
 params:
-  env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: ExampleSite
-  description: "ExampleSite description"
-  keywords: [Blog, Portfolio, PaperMod]
-  author: Rey
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.告诉系统这是“正式上线版”。
+  title: bnhnp    #网页的标题，会显示在浏览器标签栏上。
+  description: "Rey's blog" #网站简介。当别人在 Google 搜索到你，或者在微信/推特分享你的链接时，下面那段小小的描述文字就是它。
+  keywords: [Blog, Portfolio, PaperMod] #给搜索引擎看的“关键词标签”
+  author: Rey #文章默认的作者名字。
   # author: ["Me", "You"] # multiple authors 显示作者
-  images: ["<link or path of image for opengraph, twitter-cards>"]
+  images: ["<link or path of image for opengraph, twitter-cards>"] #分享封面图。
   
-  DateFormat: "2006/01/02" #日期显示
+  DateFormat: "2006/01/02" #日期显示格式
+
   defaultTheme: auto # dark, light
-  disableThemeToggle: false
+  disableThemeToggle: false #是否禁用开关。false不禁用，可以手动点击太阳/月亮切换
 
-  ShowReadingTime: true
-  ShowShareButtons: false
-  ShowPostNavLinks: true
-  ShowBreadCrumbs: true
-  ShowCodeCopyButtons: true
-  ShowWordCount: true
-  VisitCount: true
+  #文章信息开关
+  ShowReadingTime: true #预计阅读时间
+  ShowWordCount: true   #字数统计
   ShowLastMod: true #显示文章更新时间
-  ShowRssButtonInSectionTermList: false
+  VisitCount: true #访问量统计
+  hidemeta: false #是否隐藏元数据，false显示作者日期字数等
+  #导航与交互
+  ShowPostNavLinks: true #开启“上一篇/下一篇”按钮。
+  ShowBreadCrumbs: true  #开启“面包屑导航”。就像地图一样，在页面上方显示 首页 > 随笔 > 正文，
+  ShowCodeCopyButtons: true #开启“代码一键复制”。如果文章里有代码块，右上角会出现个小图标，点一下就能复制全文。
+  disableScrollToTop: false #不禁用回到顶部按钮。页面右下角会有一个小箭头，点一下直接嗖地回到最上面。
+  ShowShareButtons: false #文章末尾分享按钮。
+  #目录设置
   showtoc: true #显示目录
-  tocopen: false #自动展开目录
-
-  UseHugoToc: true
-  disableSpecial1stPost: false
-  disableScrollToTop: false
-  comments: false
-  hidemeta: false
-  hideSummary: false
+  tocopen: false #自动展开目录，false是默认折叠
+  UseHugoToc: true #使用 Hugo 自带的目录生成逻辑（通常效果更稳定）。
+  #其他
+  ShowRssButtonInSectionTermList: false #在分类列表里不显示 RSS 订阅图标。
+  disableSpecial1stPost: true #PaperMod 主题通常会把第一篇文章显示得特别大（头条效果），false为保留
+  comments: false #评论功能
+  hideSummary: false #隐藏摘要
   
+  #网站的门面小图标，<link / abs url>仅表示占位符，有logo图片放入static文件夹，修改此处位置
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "<link / abs url>"
-    favicon16x16: "<link / abs url>"
+    favicon: "<link / abs url>"      #基础图标
+    favicon16x16: "<link / abs url>" #不同尺寸的图标，适配不同分辨率的屏幕。
     favicon32x32: "<link / abs url>"
-    apple_touch_icon: "<link / abs url>"
-    safari_pinned_tab: "<link / abs url>"
-
-  label: #左上角图标
-    text: "bnhnp"
-    icon: /apple-touch-icon.png
-    iconHeight: 35
+    apple_touch_icon: "<link / abs url>" #苹果设备（iPhone/iPad）把你的网站添加到桌面时显示的图标。
+    safari_pinned_tab: "<link / abs url>" #Safari 浏览器“固定标签页”时显示的单色图标。
 
   # profile-mode
   profileMode:
@@ -93,20 +99,21 @@ params:
   homeInfoParams:
     Title: "Good morning, everyone👋"
     Content: |
-      写给自己的blog，也想和人产生碰撞
-
       住在日本
       
       “人群是一个幻觉。它并不存在。”
     
       欢迎点击下方mastodon交换友链
-
-  #homeinfo下的SNS图标，
-  socialIcons:
+  socialIcons:  #homeinfo下的SNS图标
     - name: mastodon
       url: "https://mastodon.social/@summernw33"
     #- name: github
      # url: "https://github.com/"
+
+  label: #左上角图标
+    text: "bnhnp"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
 
   analytics:
     google:
@@ -123,8 +130,7 @@ params:
     # Text: "Suggest Changes" # edit text
     # appendFilePath: true # to append file path to Edit link
 
-  # for search
-  # https://fusejs.io/api/options.html
+  # for search https://fusejs.io/api/options.html
   fuseOpts:
     isCaseSensitive: false
     shouldSort: true
@@ -134,20 +140,21 @@ params:
     minMatchCharLength: 0
     limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
     keys: ["title", "permalink", "summary", "content"]
-  since: 2026-1-6
+  
 
+#导航栏，weight越小越在前面
 menu:
   main:
     - identifier: search
-      name: search
+      name: 🔍search
       url: search
       weight: 10
     - identifier: archives
-      name: archives
+      name: 💿archives
       url: archives
       weight: 20
     - identifier: tags
-      name: tags
+      name: 🏷️tags
       url: /tags/
       weight: 30
     - identifier: links
@@ -156,9 +163,12 @@ menu:
       weight: 40
 
 StartYear: 2026 # 底部开始年份
+since: 2026-1-6 #开始年月日
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
+
+#代码高亮
 markup:
   highlight:
     noClasses: false
@@ -167,3 +177,10 @@ markup:
     # guessSyntax: true
     # lineNos: true
     # style: monokai
+  goldmark:
+    renderer:
+      unsafe: true # 我们之前为了 details 标签开启的
+  tableOfContents:
+    endLevel: 6   # 默认是 3，改为 6 即可显示所有级别的标题
+    ordered: false # 如果你想让目录带数字编号 (1. 1.1...) 可以改为 true
+    startLevel: 2 # 通常从 h2 开始，因为 h1 是文章标题

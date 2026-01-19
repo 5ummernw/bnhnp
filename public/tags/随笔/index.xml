@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on bnhnp</title>
-    <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on bnhnp</description>
+    <title>随笔 on bnhnp</title>
+    <link>http://localhost:1313/tags/%E9%9A%8F%E7%AC%94/</link>
+    <description>Recent content in 随笔 on bnhnp</description>
     <image>
       <title>bnhnp</title>
       <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
@@ -12,21 +12,13 @@
     <generator>Hugo -- 0.154.2</generator>
     <language>zh</language>
     <lastBuildDate>Mon, 19 Jan 2026 19:49:25 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>如何戒掉小红书成瘾｜我的小红书对抗报告</title>
       <link>http://localhost:1313/posts/xiaohongshu/</link>
       <pubDate>Mon, 19 Jan 2026 19:49:25 +0900</pubDate>
       <guid>http://localhost:1313/posts/xiaohongshu/</guid>
       <description>&lt;p&gt;休息日打开小红书往往一刷就是3小时。最开始10分钟的内容还是和自己关心的事情强相关的，后面越来越偏向无聊的内容，引战标题党垃圾信息，让人身心疲惫，更加空虚。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>👋Hello World!｜hugo papermod主题搭建&#43;装修01</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
-      <pubDate>Wed, 07 Jan 2026 15:45:12 +0900</pubDate>
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
-      <description>&lt;h2 id=&#34;0前言&#34;&gt;0前言&lt;/h2&gt;
-&lt;p&gt;记录下代码0基础的blog搭建步骤，和（成功/想要）实现的功能。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -2,23 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/my-first-post/</loc>
-    <lastmod>2026-01-13T00:00:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/blog%E8%A3%85%E4%BF%AE/</loc>
-    <lastmod>2026-01-13T00:00:00+09:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-01-13T00:00:00+09:00</lastmod>
+    <lastmod>2026-01-19T19:49:25+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-01-13T00:00:00+09:00</lastmod>
+    <lastmod>2026-01-19T19:49:25+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-01-13T00:00:00+09:00</lastmod>
+    <lastmod>2026-01-19T19:49:25+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/xiaohongshu/</loc>
+    <lastmod>2026-01-19T19:49:25+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2026-01-19T19:49:25+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/my-first-post/</loc>
+    <lastmod>2026-01-16T00:00:00+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/blog%E8%A3%85%E4%BF%AE/</loc>
+    <lastmod>2026-01-16T00:00:00+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E7%A0%81%E5%86%9C%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2026-01-13T00:00:00+09:00</lastmod>
+    <lastmod>2026-01-16T00:00:00+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/archives/</loc>
   </url><url>

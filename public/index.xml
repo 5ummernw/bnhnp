@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.154.2</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 16 Jan 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 19 Jan 2026 19:49:25 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何戒掉小红书成瘾｜我的小红书对抗报告</title>
+      <link>http://localhost:1313/posts/xiaohongshu/</link>
+      <pubDate>Mon, 19 Jan 2026 19:49:25 +0900</pubDate>
+      <guid>http://localhost:1313/posts/xiaohongshu/</guid>
+      <description>&lt;p&gt;休息日打开小红书往往一刷就是3小时。最开始10分钟的内容还是和自己关心的事情强相关的，后面越来越偏向无聊的内容，引战标题党垃圾信息，让人身心疲惫，更加空虚。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>👋Hello World!｜hugo papermod主题搭建&#43;装修01</title>
       <link>http://localhost:1313/posts/my-first-post/</link>

@@ -67,7 +67,7 @@ params:
   #其他
   ShowRssButtonInSectionTermList: false #在分类列表里不显示 RSS 订阅图标。
   disableSpecial1stPost: true #PaperMod 主题通常会把第一篇文章显示得特别大（头条效果），false为保留
-  comments: false #评论功能
+  comments: true #评论功能
   hideSummary: false #隐藏摘要
   
   #网站的门面小图标，<link / abs url>仅表示占位符，有logo图片放入static文件夹，修改此处位置

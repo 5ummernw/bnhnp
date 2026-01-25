@@ -8,8 +8,18 @@
 .post-content figure img {
   margin-left: auto;
   margin-right: auto;
+
 }
 
+/* 控制文章内的单张图片 */
+.post-content img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* 这两行实现居中 */
+    max-width: 50%;    /* 限制图片最大宽度为容器的 80%，你可以改成 600px 等固定值 */
+    height: auto;       /* 保持比例 */
+    border-radius: 8px; /* 可选：给图片加点圆角更美观 */
+}
 
 /* Footer runtime: match PaperMod footer/copyright style */
 .footer-runtime {
@@ -34,6 +44,7 @@
   margin: 0.2rem 0 0.4rem;
 }
 
+
 /*折叠框架更有notion味儿*/
 details {
     padding: 5px 10px;
@@ -53,8 +64,7 @@ summary {
     align-items: center;
 }
 
-/* 自定义 Notion 风格的小三角 */
-summary::before {
+summary::before { /* 自定义 Notion 风格的小三角 */
     content: '▶';
     display: inline-block;
     font-size: 10px;
@@ -77,43 +87,11 @@ details[open] summary::before {
     margin-left: 2px;
 }
 
-/*调整字体大小和行间距等*/
-:root {
-    /* 1. 调整全局字体大小（默认通常是 18px 或更高） */
-    --content-font-size: 12px; 
-
-    /* 2. 调整行间距 (Line Height) */
-    /* 默认通常是 1.6 或 1.8，中文建议 1.5 - 1.6 比较紧凑 */
-    --line-height: 1.5;
-}
-
-/* 3. 如果想针对正文段落间距进一步微调 */
-.post-content p {
-    margin-bottom: 8px; /* 段落之间的距离 */
-}
 
 
 
-/*修改字体
-字体回退机制” (Font Stack)，在用户电脑从左到右依次寻找
-不推荐制定字体，因为网页加载速度很变慢
-*/
-body {
-    font-family: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
-}
 
-.post-content {
-    text-align: left;           /* 取消两端对齐 */
-    word-break: break-word;     /* 允许单词内换行，防止长单词撑破布局 */
-    line-height: 1.8;           /* 适当增加行高，提升中文阅读体验 */
-    letter-spacing: 0.02em;     /* 微调字间距，让中文看起来不那么局促 */
-}
 
-.post-content p {
-    /* 调整段落之间的上下间距 */
-    /* 第一个值 1.5rem 是上下间距，第二个值 0 是左右间距 */
-    margin: 1rem 0; 
-}
 
 /* 1. 隐藏目录中所有的列表圆点 */
 .toc ul {

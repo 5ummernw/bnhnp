@@ -1,7 +1,7 @@
 #基础信息区（身份证明），你是谁，在哪里
-baseURL: https://bnhnp.netlify.app/
+baseURL: "https://www.summernw33.com/"
 languageCode: #zh #en-us
-title: bnhnp
+title: summernw33
 theme: PaperMod
 
 #页面排版区
@@ -36,7 +36,7 @@ outputs:
 #细节装修区，最核心设置
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.告诉系统这是“正式上线版”。
-  title: bnhnp    #网页的标题，会显示在浏览器标签栏上。
+  title: summernw33    #网页的标题，会显示在浏览器标签栏上。
   description: "Rey's blog" #网站简介。当别人在 Google 搜索到你，或者在微信/推特分享你的链接时，下面那段小小的描述文字就是它。
   keywords: [Blog, Portfolio, PaperMod] #给搜索引擎看的“关键词标签”
   author: Rey #文章默认的作者名字。
@@ -74,11 +74,17 @@ params:
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "<link / abs url>"      #基础图标
-    favicon16x16: "<link / abs url>" #不同尺寸的图标，适配不同分辨率的屏幕。
-    favicon32x32: "<link / abs url>"
-    apple_touch_icon: "<link / abs url>" #苹果设备（iPhone/iPad）把你的网站添加到桌面时显示的图标。
-    safari_pinned_tab: "<link / abs url>" #Safari 浏览器“固定标签页”时显示的单色图标。
+  
+    # 基础图标，
+    favicon: "/favicon.ico"
+    # PaperMod 默认支持 16 和 32 尺寸，如果你下载的包里有，可以填上
+    #不同尺寸的图标，适配不同分辨率的屏幕。
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+    # 苹果设备图标，（iPhone/iPad）把你的网站添加到桌面时显示的图标。
+    apple_touch_icon: "/apple-touch-icon.png"
+    # 如果生成包里有这个 SVG 文件，填在这里可以解决 Safari 浏览器“固定标签页”时显示的单色图标。
+    safari_pinned_tab: "/favicon.svg"
 
   # profile-mode
   profileMode:
@@ -99,10 +105,20 @@ params:
   homeInfoParams:
     Title: "Good morning, everyone👋"
     Content: |
-      住在日本
+      summernightwind
+      
+      夏夜晚风
+
+      是一个让人感到舒服的东西
+
+      在水里和在风里感觉相同，所以网站的头像是在水里的鳐鱼Ray
+
+      /
+
+      常住日本
       
       “人群是一个幻觉。它并不存在。”
-    
+
       欢迎点击下方mastodon交换友链
   socialIcons:  #homeinfo下的SNS图标
     - name: mastodon
@@ -111,7 +127,7 @@ params:
      # url: "https://github.com/"
 
   label: #左上角图标
-    text: "bnhnp"
+    text: "summernw33"
     icon: /apple-touch-icon.png
     iconHeight: 35
 

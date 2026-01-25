@@ -6,7 +6,7 @@ draft: false
 hidemeta: true
 showToc: false
 disableShare: true
-comments: true
+comments: false
 reward: false
 showbreadcrumbs: false
 ---

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tags on summernw33</title>
+        <link>http://localhost:1313/tags/</link>
+        <description>Recent content in Tags on summernw33</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh</language>
+        <lastBuildDate>Sun, 08 Mar 2026 19:43:51 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>随笔</title>
+            <link>http://localhost:1313/tags/%E9%9A%8F%E7%AC%94/</link>
+            <pubDate>Sun, 08 Mar 2026 19:43:51 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E9%9A%8F%E7%AC%94/</guid>
+            <description></description>
+        </item><item>
+            <title>灵光一现</title>
+            <link>http://localhost:1313/tags/%E7%81%B5%E5%85%89%E4%B8%80%E7%8E%B0/</link>
+            <pubDate>Fri, 13 Feb 2026 18:21:25 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E7%81%B5%E5%85%89%E4%B8%80%E7%8E%B0/</guid>
+            <description></description>
+        </item><item>
+            <title>Recap</title>
+            <link>http://localhost:1313/tags/recap/</link>
+            <pubDate>Sat, 31 Jan 2026 16:10:40 +0900</pubDate>
+            <guid>http://localhost:1313/tags/recap/</guid>
+            <description></description>
+        </item><item>
+            <title>DIY_blog</title>
+            <link>http://localhost:1313/tags/diy_blog/</link>
+            <pubDate>Wed, 07 Jan 2026 15:45:12 +0900</pubDate>
+            <guid>http://localhost:1313/tags/diy_blog/</guid>
+            <description></description>
+        </item><item>
+            <title>灵光</title>
+            <link>http://localhost:1313/tags/%E7%81%B5%E5%85%89/</link>
+            <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+            <guid>http://localhost:1313/tags/%E7%81%B5%E5%85%89/</guid>
+            <description></description>
+        </item></channel>
+</rss>

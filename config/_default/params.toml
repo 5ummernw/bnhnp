@@ -1,0 +1,48 @@
+mainSections = ['post'] #指定哪个文件夹的文章显示在首页
+featuredImageField = 'image' #文章封面图的字段名，文章头部写image能够被识别为封面图
+rssFullContent = false #rss订阅显示全文
+favicon = 'img/favicon.png' #浏览器标签页小图标
+
+[footer]           #页脚设置
+        since = 2026          #建站年份
+        customText = '运行时间统计中'   #页脚自定义文字
+
+[dateFormat]                   #日期显示格式
+        published = '2006-01-02'
+        lastUpdated = '2006-01-02'
+
+[sidebar]              #侧边栏
+        # emoji = '👋'              #名字旁边的emoji
+        subtitle = '嘿！让我们轻松一点'        #头像下的简介
+        avatar = "img/avatar.png" #头像显示,使用本地图片
+
+[article]               #文章设置
+        math = false               #数学公式渲染
+        toc = true                 #文章目录
+        readingTime = true         #预计阅读时间
+        headingAnchor = false
+
+[article.license]                 #文章底部版权声明
+        enabled = true
+        default = "Licensed under CC BY-NC-SA 4.0"
+    
+[widgets]                         #小组件
+    homepage = [                  #首页右侧边栏显示
+        { type = "search" },
+        { type = "archives", params = { limit = 5 } },
+        { type = "categories", params = { limit = 10 } },
+        { type = "tag-cloud", params = { limit = 10 } },
+    ]
+    page = [{ type = "toc" }]      #文章页侧边栏显示：目录
+
+[opengraph.twitter]
+    site = ""
+    card = "summary_large_image"
+
+[colorScheme]
+    toggle  = true
+    default = "auto"
+    
+[comments]
+        enabled = false            #评论功能
+        #provider = "disqus"

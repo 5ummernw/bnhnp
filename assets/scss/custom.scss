@@ -1,0 +1,78 @@
+//最后修改时间和阅读时间字体大小保持一致
+.article-time span {
+    font-size: 1.4rem;
+    color: var(--card-text-color-tertiary);
+}
+
+//neodb的样式
+.db-card {
+  margin: 1.5rem auto;
+  max-width: 560px;        /* 控制宽度，不会太长 */
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  padding: 1.2rem;
+  background: var(--card-background);
+}
+
+.db-card-subject {
+  display: flex;
+  gap: 1.2rem;
+  position: relative;
+}
+
+.db-card-post {
+  flex-shrink: 0;
+  width: 100px;            /* 封面图稍微大一点 */
+}
+
+.db-card-post img {
+  width: 100px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.db-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.db-card-title a {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+.db-card-rating {
+  font-size: 1.2rem;       /* 日期和看过字体大一点 */
+  color: var(--card-text-color-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.db-card-rating-stars {
+  display: inline-flex;
+  gap: 2px;
+  color: #f0a500;
+}
+
+.db-card-comment {
+  font-size: 1。5rem;      /* 评论字体大一点 */
+  line-height: 1.7;
+}
+
+.db-card-cate {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #a0a0c0;
+  color: white;
+  font-size: 0.8rem;
+  padding: 2px 10px;
+  border-radius: 4px;
+  text-transform: capitalize;
+}

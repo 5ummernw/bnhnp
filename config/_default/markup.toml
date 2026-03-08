@@ -1,0 +1,40 @@
+# Markdown renderer configuration
+[goldmark.renderer]
+    unsafe = true
+
+[goldmark.parser.attribute]
+    block = true
+    title = true
+
+[goldmark.extensions.passthrough]
+    enable = true
+
+    # LaTeX math support
+    # https://gohugo.io/content-management/mathematics/
+    [goldmark.extensions.passthrough.delimiters]
+        block  = [['\[', '\]'], ['$$', '$$']]
+        inline = [['\(', '\)']]
+
+[tableOfContents]
+    endLevel   = 4
+    ordered    = true
+    startLevel = 2
+
+[highlight]
+    noClasses          = false
+    codeFences         = true
+    guessSyntax        = true
+    lineNoStart        = 1
+    lineNos            = true
+    lineNumbersInTable = true
+    tabWidth           = 4
+
+
+# [markup]                            #控制文章内容渲染方式
+#     [markup.goldmark.renderer]      #在文章里直接写HTML代码，插入 <iframe> 视频、自定义 <div> 样式，需设为true
+#         unsafe = true
+#     [markup.tableOfContents]        #控制右侧文章目录显示哪些级别的标题
+#         startLevel = 2
+#         endLevel = 4
+#     [markup.highlight]              #代码块高亮的渲染方式
+#         noClasses = false           #false用css class来控制高亮样式，方便自定义主题颜色；true直接把颜色写进 HTML 行内样式

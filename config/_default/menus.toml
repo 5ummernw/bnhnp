@@ -1,0 +1,69 @@
+# Configure main menu and social menu
+#[[main]]
+#identifier = "home"
+#name = "Home"
+#url = "/"
+#[main.params]
+#icon = "home"
+#newtab = true
+
+# [[social]]
+#     identifier = "github"
+#     name       = "GitHub"
+#     url        = "https://github.com/CaiJimmy/hugo-theme-stack"
+
+#     [social.params]
+#         icon = "brand-github"
+
+[[social]]
+    identifier = "mastodon"
+    name       = "mastodonn"
+    url        = "https://mastodon.social/@summernw33"
+
+    [social.params]
+        icon = "brand-mastodon"
+
+# [[social]]
+#     identifier = "twitter"
+#     name       = "Twitter"
+#     url        = "https://twitter.com"
+
+#     [social.params]
+#         icon = "brand-twitter"
+
+# #导航菜单设置，每个menu.main是导航栏的按钮
+#     [[main]]
+#         identifier = 'home'      #菜单项的ID，内部识别用
+#         name = 'Home'            
+#         url = '/'
+#         weight = 1               #数字越小越靠前
+
+#     [[menu.main]]
+#         identifier = 'archives'
+#         name = '💿归档'
+#         url = '/archives/'
+#         weight = 2
+
+#     [[menu.main]]
+#         identifier = 'links'
+#         name = '链接'
+#         url = '/links/'
+#         weight = 3
+
+#     [[menu.main]]
+#         identifier = 'subscribe'
+#         name = 'RSS订阅'
+#         url = '/RSS/'
+#         weight = 4
+
+#     [[menu.main]]
+#         identifier = ' search'
+#         name = '搜索'
+#         url = '/search/'
+#         weight = 5
+
+#     [[menu.main]]
+#         identifier = 'about'
+#         name = '关于'
+#         url = '/about/'
+#         weight = 6

@@ -1,0 +1,12 @@
+baseURL = 'https://www.summernw33.com/'
+languageCode = 'zh'
+title = 'summernw33'
+theme = 'hugo-theme-stack'
+
+
+defaultContentLanguage = 'zh'
+hasCJKLanguage = true # Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
+                      #This will make .Summary and .WordCount behave correctly for CJK languages.
+
+[pagination]
+    pagerSize = 5  

@@ -1,9 +1,11 @@
 {{- $IsList := .IsList -}}
 {{- $Page := .Page -}}
 <div class="article-details">
-    {{ if $Page.Params.categories }}
+    {{/*  {{ if $Page.Params.categories }}修改首页categories显示至tags显示  */}}
+    {{ if $Page.Params.tags }}
     <header class="article-category">
-        {{ range ($Page.GetTerms "categories") }}
+        {{/*  {{ range ($Page.GetTerms "categories") }}修改首页categories显示至tags显示  */}}
+        {{ range ($Page.GetTerms "tags") }}
             {{ $color := partial "helper/color-from-str" .LinkTitle }}
             {{ $BackgroundColor := default $color.BackgroundColor .Params.style.background }}
             {{ $TextColor := default $color.TextColor .Params.style.color }}
@@ -73,11 +75,13 @@
         </footer>
     {{ end }}
 
-    {{ if and $Page.Site.Params.Article.List.ShowTags ($Page.GetTerms "tags") $IsList }}
+    {{/*  {{ if and $Page.Site.Params.Article.List.ShowTags ($Page.GetTerms "tags") $IsList }}  */}}
+    {{ if and ($Page.GetTerms "categories") (not $IsList) }}
         <footer class="article-header-tags">
             {{ partial "helper/icon" "tag" }}
             <div>
-                {{ range ($Page.GetTerms "tags") }}
+                {{/*  {{ range ($Page.GetTerms "tags") }}  */}}
+                {{ range ($Page.GetTerms "categories") }}
                     <a href="{{ .RelPermalink }}" class="link">{{ .LinkTitle }}</a>
                 {{ end }}
             </div>

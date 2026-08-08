@@ -8,6 +8,11 @@ menu:
         params:
             icon: user
 ---
+快速了解我的关键词：
+
+・在it行业工作的小白
+
+・住在日本
 
 (
 ・summernightwind

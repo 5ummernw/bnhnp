@@ -5,7 +5,13 @@
         <description>Recent content in Coding on summernw33</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Fri, 16 Jan 2026 00:00:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/categories/coding/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 08 Aug 2026 21:52:12 +0900</lastBuildDate><atom:link href="http://localhost:1313/categories/coding/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>如何为obsidian安装pandoc</title>
+            <link>http://localhost:1313/p/2026pandoc/</link>
+            <pubDate>Sat, 08 Aug 2026 21:52:12 +0900</pubDate>
+            <guid>http://localhost:1313/p/2026pandoc/</guid>
+            <description>&lt;p&gt;pandoc是obsidian的第三方插件，文件导出插件&lt;/p&gt;&#xA;&lt;details&gt;&#xA;  &lt;summary&gt;0.前言&lt;/summary&gt;&#xA;  重新开始用Obsidian做内容管理/优秀文章收集器。为此，想把两年前写的零碎的内容删除。删除之前做个存档。ob自己的导出选择性少，于是配置了pandoc这个插件。&#xA;&lt;/details&gt;&#xA;&lt;p&gt;1.安装pandoc&lt;/p&gt;</description>
+        </item><item>
             <title>👋Hello World!｜hugo papermod主题搭建&#43;装修01</title>
             <link>http://localhost:1313/p/hello-world/</link>
             <pubDate>Wed, 07 Jan 2026 15:45:12 +0900</pubDate>

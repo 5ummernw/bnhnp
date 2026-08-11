@@ -5,11 +5,17 @@
         <description>Recent content in How To on summernw33</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Sat, 08 Aug 2026 21:52:12 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/how-to/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 11 Aug 2026 22:13:30 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/how-to/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>如何申请日本的高度人才签证</title>
+            <link>http://localhost:1313/p/2026highlyskilled/</link>
+            <pubDate>Tue, 11 Aug 2026 22:13:30 +0900</pubDate>
+            <guid>http://localhost:1313/p/2026highlyskilled/</guid>
+            <description>&lt;p&gt;0.前提&lt;/p&gt;&#xA;&lt;p&gt;不是从0到拿到高才的教程，是我自己申请日本高才的记录。&lt;/p&gt;&#xA;&lt;p&gt;日本的高度人才是什么？&lt;a class=&#34;link&#34; href=&#34;https://www.moj.go.jp/isa/applications/resources/newimmiact_3_system_index.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;「高度専門職」&lt;/a&gt;，中文语境大家简称，高才。高才签证是日本政府为积极接收国外的高度专职人才而设立的制度。为高才持有者给予优待政策，5年在留期间、更快取得永驻、配偶可以工作、满足条件可携带父母和佣人等。但是高材是和公司绑定的，如果持有高才签证跳槽需要同时更换签证，而日本普通的工签不需要。&lt;/p&gt;</description>
+        </item><item>
             <title>如何为obsidian安装pandoc</title>
             <link>http://localhost:1313/p/2026pandoc/</link>
             <pubDate>Sat, 08 Aug 2026 21:52:12 +0900</pubDate>
             <guid>http://localhost:1313/p/2026pandoc/</guid>
-            <description>&lt;p&gt;pandoc是obsidian的第三方插件，文件导出插件&lt;/p&gt;&#xA;&lt;details&gt;&#xA;  &lt;summary&gt;0.前言&lt;/summary&gt;&#xA;  重新开始用Obsidian做内容管理/优秀文章收集器。为此，想把两年前写的零碎的内容删除。删除之前做个存档。ob自己的导出选择性少，于是配置了pandoc这个插件。&#xA;&lt;/details&gt;&#xA;&lt;p&gt;1.安装pandoc&lt;/p&gt;</description>
+            <description>&lt;p&gt;pandoc是obsidian的第三方插件，拓展性强的文件导出插件。&lt;/p&gt;&#xA;&lt;details&gt;&#xA;  &lt;summary&gt;0.前言&lt;/summary&gt;&#xA;  重新开始用Obsidian做内容管理/优秀文章收集器。为此，想把两年前写的零碎的内容删除。删除之前做个存档。ob自己的导出选择性少，于是配置了pandoc这个插件。&#xA;&lt;/details&gt;&#xA;&lt;p&gt;1.安装pandoc&lt;/p&gt;</description>
         </item></channel>
 </rss>

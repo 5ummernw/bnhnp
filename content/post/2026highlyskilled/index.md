@@ -9,7 +9,7 @@ categories:                      #分类
     - 日常
 tags:                            #标签，支持多个
     - How TO
-weight: 1                        # You can add weight to some posts to override the default sorting (date descending) 权重，用于置顶或手动排序
+weight:                       # You can add weight to some posts to override the default sorting (date descending) 权重，用于置顶或手动排序
 toc : true                       #文章目录
 draft : false                    #草稿
 ---

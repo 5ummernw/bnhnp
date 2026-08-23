@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>HowTO on summernw33</title>
+        <link>http://localhost:1313/tags/howto/</link>
+        <description>Recent content in HowTO on summernw33</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh</language>
+        <lastBuildDate>Sun, 23 Aug 2026 19:58:03 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/howto/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>kindle6安装微信阅读</title>
+            <link>http://localhost:1313/p/202608koreader/</link>
+            <pubDate>Sun, 23 Aug 2026 19:58:03 +0900</pubDate>
+            <guid>http://localhost:1313/p/202608koreader/</guid>
+            <description>&lt;details&gt;&#xA;  &lt;summary&gt;碎碎念&lt;/summary&gt;&#xA;  &lt;p&gt;最近用微信读书app看书感觉很方便，不需要去网站下载直接搜索书名就可以看。为了护眼，更想用电子书阅读器看。本来是打算买国产的电子书阅读器，不信任国产厂商的质量把控，于是搜了一些攻略把手头最新固件版本的kinlde6进行了越狱。&lt;/p&gt;</description>
+        </item></channel>
+</rss>

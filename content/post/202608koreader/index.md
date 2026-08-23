@@ -41,7 +41,7 @@ draft : false                    #草稿
 
 2-2安装koreader插件：SimpleUI
 
-原装版的koreader操作性上并不算优秀，在微信阅读的教程里发现有这个[插件](https://github.com/doctorhetfield-cmd/simpleui.koplugin)。在installation部分有详细的安装方法。注意下载完code之后文件名字是simpleui.koplugin-main，需要改成simpleui.koplugin，这样拷贝到kinlde根目录中才能显示。
+原装版的koreader操作性上并不算优秀，在微信阅读的教程里发现有这个[插件](https://github.com/doctorhetfield-cmd/simpleui.koplugin)。在installation部分有详细的安装方法。注意下载完code之后文件名字是simpleui.koplugin-main，需要改成simpleui.koplugin，这样拷贝到kindle根目录中才能显示。
 
 ---
 Huge thanks to all the devs!

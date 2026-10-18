@@ -3,10 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-08-23T19:58:03+09:00</lastmod>
+    <lastmod>2026-10-18T22:45:33+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-08-23T19:58:03+09:00</lastmod>
+    <lastmod>2026-10-18T22:45:33+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2026-10-18T22:45:33+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-10-18T22:45:33+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/p/2026kusatsu/</loc>
+    <lastmod>2026-10-18T22:45:33+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/%E9%9D%9E%E6%97%A5%E5%B8%B8/</loc>
+    <lastmod>2026-10-18T22:45:33+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E6%95%A3%E6%AD%A5/</loc>
+    <lastmod>2026-10-18T22:45:33+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/howto/</loc>
     <lastmod>2026-08-23T19:58:03+09:00</lastmod>
@@ -14,19 +29,10 @@
     <loc>http://localhost:1313/p/202608koreader/</loc>
     <lastmod>2026-08-23T19:58:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/</loc>
-    <lastmod>2026-08-23T19:58:03+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-08-23T19:58:03+09:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/categories/%E6%97%A5%E5%B8%B8/</loc>
     <lastmod>2026-08-23T19:58:03+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/p/2026baseball/</loc>
-    <lastmod>2026-08-13T00:05:57+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E6%95%A3%E6%AD%A5/</loc>
     <lastmod>2026-08-13T00:05:57+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/how-to/</loc>
@@ -46,9 +52,6 @@
   </url><url>
     <loc>http://localhost:1313/p/2026changes/</loc>
     <lastmod>2026-08-08T00:56:32+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/%E9%9D%9E%E6%97%A5%E5%B8%B8/</loc>
-    <lastmod>2026-04-30T19:29:58+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/p/2603dalian/</loc>
     <lastmod>2026-04-30T19:29:58+09:00</lastmod>

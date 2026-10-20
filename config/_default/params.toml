@@ -5,7 +5,8 @@ favicon = 'img/favicon.png' #浏览器标签页小图标
 
 [footer]           #页脚设置
         since = 2026          #建站年份
-        customText = '运行时间统计中'   #页脚自定义文字
+        customText = '<span id="site-runtime">本站已运行</span>'   #页脚运行时间
+        startDate = '2026-01-06T00:00:00+09:00' #建站时间（日本时间）
 
 [dateFormat]                   #日期显示格式
         published = '2006-01-02'

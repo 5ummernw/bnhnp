@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+    <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="人生第一次现场看比赛，巨人Grants对阵养乐多燕子Shallows。(怎么回事这个小学生日记的标准题目和开头)\n1.日本野球观战的氛围太好了！\n男女老少都有，其他还有什么活动能有这样的上至拄拐老爷爷下至需要抱在怀里的baby的年龄层呢？除了看比赛，大家可以吃吃喝喝，聊天。不玩手机的社交时间，这样稀缺的时间块，让我很喜欢。\n">
 <title>看一次棒球赛</title>
 
 
-<link rel="canonical" href="http://localhost:1313/p/2026baseball/">
+<link rel="canonical" href="https://www.summernw33.com/p/2026baseball/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
@@ -14,7 +14,7 @@
 
 <link rel="stylesheet" href="/scss/style.min.ca66e493e0916cdc2800e8855e38b30e5f1b6c735094cb48ef6918f271470923.css"><meta property='og:title' content="看一次棒球赛">
 <meta property='og:description' content="人生第一次现场看比赛，巨人Grants对阵养乐多燕子Shallows。(怎么回事这个小学生日记的标准题目和开头)\n1.日本野球观战的氛围太好了！\n男女老少都有，其他还有什么活动能有这样的上至拄拐老爷爷下至需要抱在怀里的baby的年龄层呢？除了看比赛，大家可以吃吃喝喝，聊天。不玩手机的社交时间，这样稀缺的时间块，让我很喜欢。\n">
-<meta property='og:url' content='http://localhost:1313/p/2026baseball/'>
+<meta property='og:url' content='https://www.summernw33.com/p/2026baseball/'>
 <meta property='og:site_name' content='summernw33'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='散步' /><meta property='article:published_time' content='2026-08-13T00:05:57&#43;09:00'/><meta property='article:modified_time' content='2026-08-13T00:05:57&#43;09:00'/>
 <meta name="twitter:title" content="看一次棒球赛">
@@ -444,7 +444,7 @@
     
     <section class="powerby">
         
-            运行时间统计中 <br/>
+            <span id="site-runtime">本站已运行</span> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
         主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
@@ -485,7 +485,28 @@
             </main>
         </div>
         
-<script type="text/javascript" src="/ts/main.e32e018eb96b831f4b9efcc9de275b6c2ebfd160a5fc46db9f190f974b704121.js" defer></script>
+<script type="text/javascript" src="/ts/main.acaf849f2b273f6a8368a58b001f336738d0c948d92e79b116467d0c7515f932.js" defer></script>
+
+<script>
+(() => {
+    const runtime = document.getElementById('site-runtime');
+    const startDate = new Date("2026-01-06T00:00:00+09:00").getTime();
+    if (!runtime || !Number.isFinite(startDate)) return;
+
+    function updateRuntime() {
+        const totalSeconds = Math.max(0, Math.floor((Date.now() - startDate) / 1000));
+        const days = Math.floor(totalSeconds / 86400);
+        const hours = Math.floor(totalSeconds % 86400 / 3600);
+        const minutes = Math.floor(totalSeconds % 3600 / 60);
+        const seconds = totalSeconds % 60;
+        runtime.textContent = `本站已运行 ${days} 天 ${hours} 小时 ${minutes} 分 ${seconds} 秒`;
+    }
+
+    updateRuntime();
+    setInterval(updateRuntime, 1000);
+})();
+</script>
+
 
 
     </body>

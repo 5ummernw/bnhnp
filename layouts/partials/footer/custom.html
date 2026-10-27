@@ -10,8 +10,7 @@
         const days = Math.floor(totalSeconds / 86400);
         const hours = Math.floor(totalSeconds % 86400 / 3600);
         const minutes = Math.floor(totalSeconds % 3600 / 60);
-        const seconds = totalSeconds % 60;
-        runtime.textContent = `本站已运行 ${days} 天 ${hours} 小时 ${minutes} 分 ${seconds} 秒`;
+        runtime.textContent = `本站已运行 ${days} 天 ${hours} 小时 ${minutes} 分`;
     }
 
     updateRuntime();

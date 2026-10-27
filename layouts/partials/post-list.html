@@ -1,5 +1,11 @@
+{{ $pages := . }}
+{{ $showTags := false }}
+{{ if reflect.IsMap . }}
+  {{ $pages = .Pages }}
+  {{ $showTags = .ShowTags }}
+{{ end }}
 <ul class="blog-posts">
-{{ range . }}
-<li><span><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></span><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+{{ range $pages }}
+<li><span><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></span><div><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ if $showTags }}{{ with .GetTerms "tags" }} <small class="home-post-tags">{{ range . }}<a href="{{ .RelPermalink }}" data-tag="{{ .LinkTitle | lower }}">{{ .LinkTitle }}</a>{{ end }}</small>{{ end }}{{ end }}</div></li>
 {{ else }}<li>暂无文章</li>{{ end }}
 </ul>

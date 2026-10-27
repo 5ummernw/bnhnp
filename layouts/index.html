@@ -9,7 +9,12 @@
   {{ $posts := where .Site.RegularPages "Section" "in" .Site.Params.mainSections }}
   <ul>
     {{ range first 10 $posts.ByDate.Reverse }}
-    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{ with .GetTerms "tags" }}
+      <small class="home-post-tags">{{ range . }}<a href="{{ .RelPermalink }}" data-tag="{{ .LinkTitle | lower }}">{{ .LinkTitle }}</a>{{ end }}</small>
+      {{ end }}
+    </li>
     {{ end }}
   </ul>
 

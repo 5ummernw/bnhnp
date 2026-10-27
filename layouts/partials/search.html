@@ -5,7 +5,7 @@
 <input id="search-input" type="search" placeholder="Search..." autocomplete="off">
 <p id="post-count" role="status" aria-live="polite">There {{ if eq (len $posts) 1 }}is 1 piece{{ else }}are {{ len $posts }} pieces{{ end }}.</p>
 <div class="tag-list" aria-label="Tags">
-{{ range .Site.Taxonomies.tags }}<a href="{{ .Page.RelPermalink }}">#{{ .Page.Title }}</a>{{ end }}
+{{ range .Site.Taxonomies.tags }}<a href="{{ .Page.RelPermalink }}" data-tag="{{ .Page.Title | lower }}">#{{ .Page.Title }}</a>{{ end }}
 </div>
 <div id="search-results" hidden>
 {{ range $posts.ByDate.Reverse.GroupByDate "2006" }}

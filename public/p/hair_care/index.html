@@ -621,6 +621,18 @@ nav { display: flex; flex-wrap: wrap; gap: 8px; }
 .pagination { display: flex; justify-content: space-between; margin: 24px 0; }
 .site-description, .post-meta { color: var(--text-color-secondary); }
 .tag-list { display: flex; flex-wrap: wrap; gap: 12px; }
+.home-post-tags { display: inline; margin-left: 2px; font-size: .75em; }
+:is(.home-post-tags, .tag-list) a { display: inline-block; margin-right: 4px; padding: 0 4px; border-radius: 3px; background: var(--tag-bg, #f0f1f3); color: var(--tag-text, #717783); vertical-align: baseline; }
+ul.blog-posts .home-post-tags a:visited { color: var(--tag-text, #717783); }
+:is(.home-post-tags, .tag-list) [data-tag="散步"] { --tag-bg: #edf5ed; --tag-text: #6a856e; }
+:is(.home-post-tags, .tag-list) [data-tag="散文"] { --tag-bg: #f3eef8; --tag-text: #88749b; }
+:is(.home-post-tags, .tag-list) [data-tag="howto"] { --tag-bg: #edf3fa; --tag-text: #6b829b; }
+:is(.home-post-tags, .tag-list) [data-tag="recap"] { --tag-bg: #fbf2e6; --tag-text: #968064; }
+:is(.home-post-tags, .tag-list) [data-tag="diy_blog"] { --tag-bg: #faedf0; --tag-text: #a07983; }
+@media (prefers-color-scheme: dark) {
+  :is(.home-post-tags, .tag-list) a { background: color-mix(in srgb, var(--tag-bg, #f0f1f3) 14%, var(--bg-color-primary)); color: color-mix(in srgb, var(--tag-bg, #f0f1f3) 65%, var(--tag-text, #717783)); }
+  ul.blog-posts .home-post-tags a:visited { color: color-mix(in srgb, var(--tag-bg, #f0f1f3) 65%, var(--tag-text, #717783)); }
+}
 .db-card { background: var(--bg-color-secondary); }
 .db-card-title a { color: var(--link-color); }
 .db-card-rating { color: var(--text-color-secondary); font-size: .9rem; }

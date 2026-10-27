@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Coding on summernw33</title>
-        <link>https://www.summernw33.com/categories/coding/</link>
+        <link>http://localhost:1313/categories/coding/</link>
         <description>Recent content in Coding on summernw33</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Sat, 08 Aug 2026 21:52:12 +0900</lastBuildDate><atom:link href="https://www.summernw33.com/categories/coding/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 08 Aug 2026 21:52:12 +0900</lastBuildDate><atom:link href="http://localhost:1313/categories/coding/index.xml" rel="self" type="application/rss+xml" /><item>
             <title>如何为obsidian安装pandoc</title>
-            <link>https://www.summernw33.com/p/2026pandoc/</link>
+            <link>http://localhost:1313/p/2026pandoc/</link>
             <pubDate>Sat, 08 Aug 2026 21:52:12 +0900</pubDate>
-            <guid>https://www.summernw33.com/p/2026pandoc/</guid>
+            <guid>http://localhost:1313/p/2026pandoc/</guid>
             <description>&lt;p&gt;pandoc是obsidian的第三方插件，拓展性强的文件导出插件。&lt;/p&gt;&#xA;&lt;details&gt;&#xA;  &lt;summary&gt;0.前言&lt;/summary&gt;&#xA;  重新开始用Obsidian做内容管理/优秀文章收集器。为此，想把两年前写的零碎的内容删除。删除之前做个存档。ob自己的导出选择性少，于是配置了pandoc这个插件。&#xA;&lt;/details&gt;&#xA;&lt;p&gt;1.安装pandoc&lt;/p&gt;</description>
         </item><item>
             <title>👋Hello World!｜hugo papermod主题搭建&#43;装修01</title>
-            <link>https://www.summernw33.com/p/hello-world/</link>
+            <link>http://localhost:1313/p/hello-world/</link>
             <pubDate>Wed, 07 Jan 2026 15:45:12 +0900</pubDate>
-            <guid>https://www.summernw33.com/p/hello-world/</guid>
+            <guid>http://localhost:1313/p/hello-world/</guid>
             <description>&lt;h2 id=&#34;前言&#34;&gt;前言&#xA;&lt;/h2&gt;&lt;p&gt;记录下代码0基础的blog搭建步骤，和（成功/想要）实现的功能。&lt;/p&gt;&#xA;&lt;details&gt;&#xA;  &lt;summary&gt;碎碎念，点击展开&lt;/summary&gt;&#xA;  &lt;p&gt;1.零基础搭自己的blog网站很难。经常为了实现一个功能搜很多文章+AI老师反复修改。一个晚上能改好一个功能很不容易，当然也很棒。&lt;/p&gt;</description>
         </item></channel>
 </rss>

@@ -1,7 +1,7 @@
 mainSections = ['post'] #指定哪个文件夹的文章显示在首页
 featuredImageField = 'image' #文章封面图的字段名，文章头部写image能够被识别为封面图
 rssFullContent = false #rss订阅显示全文
-favicon = 'img/favicon.png' #浏览器标签页小图标
+favicon = 'img/favicon-round-v3-32.png' #浏览器标签页小图标（放大主体的透明圆形 PNG）
 
 [footer]           #页脚设置
         since = 2026          #建站年份

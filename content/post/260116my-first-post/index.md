@@ -1,5 +1,5 @@
 ---
-title: 👋Hello World!｜hugo papermod主题搭建+装修01                   #文章标题
+title: Hello World!｜hugo papermod主题搭建+装修01                   #文章标题
 description:                     #文章简介，显示在列表卡片摘要
 slug: hello-world                #url的路径，例如domain/p/hello-word 
 date: 2026-01-07T15:45:12+09:00   #发布日期格式，影响排序

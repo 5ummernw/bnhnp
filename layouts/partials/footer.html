@@ -1,0 +1,15 @@
+Subscribe via <a href="{{ "/index.xml" | relURL }}">RSS</a> or just <a href="mailto:summernw33@gmail.com">say hello</a>.
+<br>
+Made with <a href="https://github.com/rokcso/hugo-bearneo/">Hugo Bear Neo</a>.
+<br>
+<span id="site-runtime">Up and running</span>
+<br>
+Copyright © {{ .Site.Params.footer.since }}{{ if ne (int .Site.Params.footer.since) now.Year }}–{{ now.Year }}{{ end }}, {{ .Site.Title }}.
+{{ with resources.Get "img/not-by-ai-writer-en.svg" }}
+<div class="not-by-ai-badge">
+  <a href="https://notbyai.fyi/" aria-label="Not By AI">
+    <img src="{{ .RelPermalink }}" alt="Written by Human, Not by AI" height="42" loading="lazy">
+  </a>
+</div>
+{{ end }}
+{{ partial "footer/custom.html" . }}

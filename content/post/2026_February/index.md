@@ -1,5 +1,5 @@
 ---
-title: 2月集❄️｜书影音展/成就                      #文章标题
+title: 2月集｜书影音展/成就                      #文章标题
 description: 本月新增了看展板块               #文章简介，显示在列表卡片摘要
 slug: 2026_February             #url的路径，例如domain/p/hello-word 
 date:  2026-03-23T22:07:04+09:00   #发布日期格式，影响排序

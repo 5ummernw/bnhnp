@@ -1,0 +1,21 @@
+{{ define "main" }}
+<content>
+  <h1>Morning👋 I'm Rey</h1>
+  <p>在日本生活的第5年，和🐈coco一起生活的第1年。</p>
+  <p>这里是我生活的A面。</p>
+  {{ .Content }}
+
+  <h3>✨ New</h3>
+  {{ $posts := where .Site.RegularPages "Section" "in" .Site.Params.mainSections }}
+  <ul>
+    {{ range first 10 $posts.ByDate.Reverse }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+
+  <h3>🌲 Explore</h3>
+  <ul>
+    <li><a href="https://mastodon.social/@summernw33" rel="me">长毛象 / Mastodon</a></li>
+  </ul>
+</content>
+{{ end }}

@@ -1,0 +1,22 @@
+{{ partial "head/custom.html" . }}
+{{ with resources.Get "img/avatar.png" }}{{ .Publish }}{{ end }}
+{{ $style := resources.Get "scss/custom.scss" | css.Sass }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+<style>
+content { display: block; }
+.not-by-ai-badge { margin-top: 16px; }
+.not-by-ai-badge a { display: inline-block; }
+.not-by-ai-badge img { height: 42px; width: auto; max-width: 100%; border: 0; border-radius: 0; content-visibility: visible; }
+.search-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+#search-input { margin-top: 16px; }
+nav { display: flex; flex-wrap: wrap; gap: 8px; }
+.pagination { display: flex; justify-content: space-between; margin: 24px 0; }
+.site-description, .post-meta { color: var(--text-color-secondary); }
+.tag-list { display: flex; flex-wrap: wrap; gap: 12px; }
+.db-card { background: var(--bg-color-secondary); }
+.db-card-title a { color: var(--link-color); }
+.db-card-rating { color: var(--text-color-secondary); font-size: .9rem; }
+.db-card-comment { font-size: 1rem; }
+pre { overflow-x: auto; }
+@media(max-width: 600px) { ul.blog-posts li span { flex: 0 0 100px; } .db-card-subject { flex-wrap: wrap; } }
+</style>

@@ -1,27 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>howTo on summernw33</title>
-        <link>https://www.summernw33.com/tags/howto/</link>
-        <description>Recent content in howTo on summernw33</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>zh</language>
-        <lastBuildDate>Sun, 23 Aug 2026 19:58:03 +0900</lastBuildDate><atom:link href="https://www.summernw33.com/tags/howto/index.xml" rel="self" type="application/rss+xml" /><item>
-            <title>Kindle Paperwhite6 安装微信阅读</title>
-            <link>https://www.summernw33.com/p/202608koreader/</link>
-            <pubDate>Sun, 23 Aug 2026 19:58:03 +0900</pubDate>
-            <guid>https://www.summernw33.com/p/202608koreader/</guid>
-            <description>&lt;details&gt;&#xA;  &lt;summary&gt;碎碎念&lt;/summary&gt;&#xA;  &lt;p&gt;最近用微信读书app看书感觉很方便，不需要去网站下载直接搜索书名就可以看。为了更大的屏幕和护眼，更想用电子书阅读器来看。本来打算买国产的电子书阅读器，看了大家的对比，再加上不信任国产厂商的质量把控，还是决定用我手里的kindle。于是搜了一些攻略把手头最新固件版本的kindle pw6进行了越狱。&lt;/p&gt;</description>
-        </item><item>
-            <title>如何申请日本的高度人才签证</title>
-            <link>https://www.summernw33.com/p/2026highlyskilled/</link>
-            <pubDate>Tue, 11 Aug 2026 22:13:30 +0900</pubDate>
-            <guid>https://www.summernw33.com/p/2026highlyskilled/</guid>
-            <description>&lt;p&gt;0.前提&lt;/p&gt;&#xA;&lt;p&gt;不是从0到拿到高才的教程，是我自己申请日本高才的记录。&lt;/p&gt;&#xA;&lt;p&gt;日本的高度人才是什么？&lt;a class=&#34;link&#34; href=&#34;https://www.moj.go.jp/isa/applications/resources/newimmiact_3_system_index.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;「高度専門職」&lt;/a&gt;，中文语境大家简称，高才。高才签证是日本政府为积极接收国外的高度专职人才而设立的制度。为高才持有者给予优待政策，5年在留期间、更快取得永驻、配偶可以工作、满足条件可携带父母和佣人等。但是高材是和公司绑定的，如果持有高才签证跳槽需要同时更换签证，而日本普通的工签不需要。&lt;/p&gt;</description>
-        </item><item>
-            <title>如何为obsidian安装pandoc</title>
-            <link>https://www.summernw33.com/p/2026pandoc/</link>
-            <pubDate>Sat, 08 Aug 2026 21:52:12 +0900</pubDate>
-            <guid>https://www.summernw33.com/p/2026pandoc/</guid>
-            <description>&lt;p&gt;pandoc是obsidian的第三方插件，拓展性强的文件导出插件。&lt;/p&gt;&#xA;&lt;details&gt;&#xA;  &lt;summary&gt;0.前言&lt;/summary&gt;&#xA;  重新开始用Obsidian做内容管理/优秀文章收集器。为此，想把两年前写的零碎的内容删除。删除之前做个存档。ob自己的导出选择性少，于是配置了pandoc这个插件。&#xA;&lt;/details&gt;&#xA;&lt;p&gt;1.安装pandoc&lt;/p&gt;</description>
-        </item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>howTo on summernw33</title>
+    <link>https://www.summernw33.com/tags/howto/</link>
+    <description>Recent content in howTo on summernw33</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    
+    
+    
+    
+    <lastBuildDate>Sun, 23 Aug 2026 19:58:03 +0900</lastBuildDate>
+    
+    
+    <atom:link href="https://www.summernw33.com/tags/howto/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kindle Paperwhite6 安装微信阅读</title>
+      <link>https://www.summernw33.com/p/202608koreader/</link>
+      <pubDate>Sun, 23 Aug 2026 19:58:03 +0900</pubDate>
+      <guid>https://www.summernw33.com/p/202608koreader/</guid>
+      <description>&lt;details&gt;&#xA;  &lt;summary&gt;碎碎念&lt;/summary&gt;&#xA;  &lt;p&gt;最近用微信读书app看书感觉很方便，不需要去网站下载直接搜索书名就可以看。为了更大的屏幕和护眼，更想用电子书阅读器来看。本来打算买国产的电子书阅读器，看了大家的对比，再加上不信任国产厂商的质量把控，还是决定用我手里的kindle。于是搜了一些攻略把手头最新固件版本的kindle pw6进行了越狱。&lt;/p&gt;&#xA;&lt;p&gt;升级之前在某书搜相关的内容，看大家的评论出现不少错误，以为会很麻烦。实际自己动手大概一小时搞定。&lt;/p&gt;&#xA;&#xA;&lt;/details&gt;&#xA;&lt;p&gt;网上的攻略写的非常详细，我在下面贴一下我的越狱流程和参考教程。&lt;/p&gt;&#xA;&lt;p&gt;0.准备工作：&lt;/p&gt;&#xA;&lt;p&gt;・一台电脑，我用的是MacBook。Kindle连接macOS需要使用&lt;a href=&#34;https://www.amazon.com/sendtokindle/mac&#34; rel=&#34;noopener noreferrer&#34;&gt;USB File Manage&lt;/a&gt;&#xA;。&lt;/p&gt;&#xA;&lt;p&gt;・确认kindle的版本。我的版本是Kindle pw6，官方的名字是Kindle Paperwhite 12generation。&lt;/p&gt;&#xA;&lt;p&gt;1.进行越狱&lt;/p&gt;&#xA;&lt;p&gt;参考的是&lt;a href=&#34;https://bookfere.com/post/1193.html&#34; rel=&#34;noopener noreferrer&#34;&gt;书伴网的教程&lt;/a&gt;&#xA;，非常详细，感谢书伴。&lt;/p&gt;&#xA;&lt;p&gt;2.安装插件，koreader。&lt;/p&gt;&#xA;&lt;p&gt;最新版本的是自动安装了包插件可以不用额外下载。但我最开始没理解什么意思，参考了&lt;a href=&#34;https://bookfere.com/post/311.html&#34; rel=&#34;noopener noreferrer&#34;&gt;插件下载的教程&lt;/a&gt;&#xA;，重新下载了包管理插件。装好包管理插件就可以下载安装koreader了。&lt;/p&gt;&#xA;&lt;p&gt;2-1安装koreader插件：微信读书&lt;/p&gt;&#xA;&lt;p&gt;微信读书是在koreader上运行的，所以要先安装好koreader之后再安装微信读书。使用了finlater大佬的开源项目，有&lt;a href=&#34;https://github.com/finlater/weread.koplugin&#34; rel=&#34;noopener noreferrer&#34;&gt;中文版的安装教程&lt;/a&gt;&#xA;。&lt;/p&gt;&#xA;&lt;p&gt;2-2安装koreader插件：SimpleUI&lt;/p&gt;&#xA;&lt;p&gt;原装版的koreader操作性上并不算优秀，在微信阅读的教程里发现有这个&lt;a href=&#34;https://github.com/doctorhetfield-cmd/simpleui.koplugin&#34; rel=&#34;noopener noreferrer&#34;&gt;插件&lt;/a&gt;&#xA;。在installation部分有详细的安装方法。注意下载完code之后文件名字是simpleui.koplugin-main，需要改成simpleui.koplugin，这样拷贝到kindle根目录中才能显示。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Huge thanks to all the devs!&lt;/p&gt;&#xA;&lt;p&gt;and see you again&lt;/p&gt;&#xA;</description>
+    </item>
+    <item>
+      <title>如何申请日本的高度人才签证</title>
+      <link>https://www.summernw33.com/p/2026highlyskilled/</link>
+      <pubDate>Tue, 11 Aug 2026 22:13:30 +0900</pubDate>
+      <guid>https://www.summernw33.com/p/2026highlyskilled/</guid>
+      <description>&lt;p&gt;0.前提&lt;/p&gt;&#xA;&lt;p&gt;不是从0到拿到高才的教程，是我自己申请日本高才的记录。&lt;/p&gt;&#xA;&lt;p&gt;日本的高度人才是什么？&lt;a href=&#34;https://www.moj.go.jp/isa/applications/resources/newimmiact_3_system_index.html&#34; rel=&#34;noopener noreferrer&#34;&gt;「高度専門職」&lt;/a&gt;&#xA;，中文语境大家简称，高才。高才签证是日本政府为积极接收国外的高度专职人才而设立的制度。为高才持有者给予优待政策，5年在留期间、更快取得永驻、配偶可以工作、满足条件可携带父母和佣人等。但是高材是和公司绑定的，如果持有高才签证跳槽需要同时更换签证，而日本普通的工签不需要。&lt;/p&gt;&#xA;&lt;p&gt;我为什么要申请高才？简而言之是为了申请日本的永驻（PR）。去年政府新规取消了3年期的在留资格可以申请永驻的规定。要申请永驻，需要满足5年的在留期间要求。高才签是必选项。&lt;/p&gt;&#xA;&lt;p&gt;怎么申请高才签？&lt;a href=&#34;https://www.moj.go.jp/isa/applications/resources/newimmiact_3_evaluate_index.html&#34; rel=&#34;noopener noreferrer&#34;&gt;打分制度&lt;/a&gt;&#xA;。满足年收入300万日元以上且在评分表得分高于70分便可以申请&lt;/p&gt;&#xA;&lt;p&gt;1.准备工作&lt;/p&gt;&#xA;&lt;p&gt;通过打分表计算自己的分数和需要准备的材料。我用官网的 excel表格来计算的，满足要求的是学历、年收、年龄、日本大学毕业、日语n1、加分大学这几项。&#xA;从工签更换高度人才，申请的对应资格是高度专门·技术活动「高度専門職1号(ロ)」。&lt;/p&gt;&#xA;&lt;p&gt;2.&lt;a href=&#34;https://www.moj.go.jp/isa/applications/status/designatedactivities02_00004.html&#34; rel=&#34;noopener noreferrer&#34;&gt;需要的材料&lt;/a&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;（必须提交类）&lt;/p&gt;&#xA;&lt;p&gt;在留資格変更許可申請書&lt;/p&gt;&#xA;&lt;p&gt;写真&lt;/p&gt;&#xA;&lt;p&gt;行おうとする活動に応じた在留資格の&lt;a href=&#34;https://www.moj.go.jp/isa/applications/status/gijinkoku.html&#34; rel=&#34;noopener noreferrer&#34;&gt;提出資料&lt;/a&gt;&#xA;（现有的在留资格的证明材料）&lt;/p&gt;&#xA;&lt;p&gt;ポイント計算表&#xA;&lt;a href=&#34;https://www.moj.go.jp/isa/content/001419077.pdf&#34; rel=&#34;noopener noreferrer&#34;&gt;ポイント計算表の各項目に関する疎明資料&lt;/a&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;（必须提示类）&lt;/p&gt;&#xA;&lt;p&gt;パスポート及び在留カード&lt;/p&gt;&#xA;&lt;p&gt;3.线上申请&lt;/p&gt;&#xA;&lt;p&gt;通过&lt;a href=&#34;https://www.rasens-immi.moj.go.jp/rasens-u/offer/offerList_initDisplay&#34; rel=&#34;noopener noreferrer&#34;&gt;入管局线上申请系统&lt;/a&gt;&#xA;进行申请。在进行正式申请之前需要先申请使用这个系统，申请方法我参考了&lt;a href=&#34;https://www.xiaohongshu.com/discovery/item/69b29e3a000000002603c84b?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABofP5VersFtRHtAfdezwgDZK82degIu9axmRb3fpfGyc=&amp;xsec_source=pc_share&#34; rel=&#34;noopener noreferrer&#34;&gt;小红书博主的帖子&lt;/a&gt;&#xA;。把2里需要上传的材料全部扫描成PDF上传到申请页面。扫描文件只能一个一个的上传（好蠢的系统）。注意，上传的文件大小合计不能超过25MB。像我一样用iPhone扫描文档的话，基本会8～9M，上传了一半收到警告，不得不重新上传一遍。&lt;/p&gt;&#xA;&lt;p&gt;下次见！&lt;/p&gt;&#xA;</description>
+    </item>
+    <item>
+      <title>如何为obsidian安装pandoc</title>
+      <link>https://www.summernw33.com/p/2026pandoc/</link>
+      <pubDate>Sat, 08 Aug 2026 21:52:12 +0900</pubDate>
+      <guid>https://www.summernw33.com/p/2026pandoc/</guid>
+      <description>&lt;p&gt;pandoc是obsidian的第三方插件，拓展性强的文件导出插件。&lt;/p&gt;&#xA;&lt;details&gt;&#xA;  &lt;summary&gt;0.前言&lt;/summary&gt;&#xA;  重新开始用Obsidian做内容管理/优秀文章收集器。为此，想把两年前写的零碎的内容删除。删除之前做个存档。ob自己的导出选择性少，于是配置了pandoc这个插件。&#xA;&lt;/details&gt;&#xA;&lt;p&gt;1.安装pandoc&lt;/p&gt;&#xA;&lt;p&gt;进入pandoc&lt;a href=&#34;https://pandoc.org/installing.html&#34; rel=&#34;noopener noreferrer&#34;&gt;官网&lt;/a&gt;&#xA;，根据OS版本选择对应下载方式。&lt;/p&gt;&#xA;&lt;p&gt;MacOS的下载方式，目前官网（2026/8/8）只有Intel芯片的安装包（x86_64）。M芯片的安装方法是使用homebrew:&#xA;&lt;code&gt;homebrew install pandoc&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;2.配置pandoc&lt;/p&gt;&#xA;&lt;p&gt;2.1 path&lt;/p&gt;&#xA;&lt;p&gt;使用&lt;code&gt;which pandoc&lt;/code&gt;找到pandoc所在的文件夹位置,复制。&lt;/p&gt;&#xA;&lt;p&gt;在obsidian中从community plugin中打开pandoc的设置界面，在path中粘贴刚刚复制的内容&lt;/p&gt;&#xA;&lt;p&gt;2.2 export folder&lt;/p&gt;&#xA;&lt;p&gt;我选了下载文件夹&lt;/p&gt;&#xA;&lt;p&gt;3.测试&lt;/p&gt;&#xA;&lt;p&gt;选择任意笔记，Command+P调出仪表盘，输入Pandoc选择想要的格式。&lt;/p&gt;&#xA;&lt;p&gt;点击确定后出现successful代表成功。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;0.1.附1:安装了错误版本的Pandoc怎么办？&lt;/p&gt;&#xA;&lt;p&gt;第一次安装的时候直接用了安装包，设置完之后导出一直显示“exporting”。查看pandoc的版本信息发现是intel版，记一下卸载方法。&lt;/p&gt;&#xA;&lt;p&gt;用terminal查看pandoc的位置：&lt;code&gt;which pandoc&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;用homebrew安装&lt;code&gt;brew install pandoc&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;出现错误信息提醒旧版本遮挡了新安装的版本shadowed by other commands earlier in your PATH&lt;/p&gt;&#xA;&lt;p&gt;检查新版本能否正常运行：&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;/opt/homebrew/bin/pandoc --version&lt;/code&gt; 显示正常版本信息&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;file /opt/homebrew/bin/pandoc&lt;/code&gt; 显示arm64&lt;/p&gt;&#xA;&lt;p&gt;新版本没问题之后删除旧的版本：&#xA;&lt;code&gt;sudo rm /usr/local/bin/pandoc&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;0.2.附2: homebrew是什么？&lt;/p&gt;&#xA;&lt;p&gt;homebrew 是主要用于 macOS的“软件管家”（包管理器package manager），通过简单的命令，可以实现查找、下载、安装、升级和卸载软件。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;see you again~&lt;/p&gt;&#xA;</description>
+    </item>
+  </channel>
 </rss>

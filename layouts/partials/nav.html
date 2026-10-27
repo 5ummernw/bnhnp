@@ -1,0 +1,2 @@
+{{ range .Site.Menus.main }}<a href="{{ .URL | relURL }}">{{ .Name }}</a>{{ end }}
+<a href="{{ "/tags/" | relURL }}">Search</a>

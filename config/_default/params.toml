@@ -1,49 +1,20 @@
-mainSections = ['post'] #指定哪个文件夹的文章显示在首页
-featuredImageField = 'image' #文章封面图的字段名，文章头部写image能够被识别为封面图
-rssFullContent = false #rss订阅显示全文
-favicon = 'img/favicon-round-v3-32.png' #浏览器标签页小图标（放大主体的透明圆形 PNG）
+mainSections = ['post']
+title = 'summernw33'
+description = '这里是我生活的A面。'
+favicon = 'img/favicon-round-v3-32.png'
+dateFormat = '2006-01-02'
+toc = true
+imageZoom = true
+upvote = false
 
-[footer]           #页脚设置
-        since = 2026          #建站年份
-        customText = '<span id="site-runtime">本站已运行</span>'   #页脚运行时间
-        startDate = '2026-01-06T00:00:00+09:00' #建站时间（日本时间）
+[author]
+    name = 'summernw33'
+    authorImage = 'img/avatar.png'
 
-[dateFormat]                   #日期显示格式
-        published = '2006-01-02'
-        lastUpdated = '2006-01-02'
+[footer]
+    since = 2026
+    startDate = '2026-01-09T02:44:00+09:00'
 
-[sidebar]              #侧边栏
-        # emoji = '👋'              #名字旁边的emoji
-        subtitle = '嘿！让我们轻松一点'        #头像下的简介
-        avatar = "img/avatar.png" #头像显示,使用本地图片
-
-[article]               #文章设置
-        math = false               #数学公式渲染
-        toc = true                 #文章目录
-        readingTime = true         #预计阅读时间
-        headingAnchor = false
-
-[article.license]                 #文章底部版权声明
-        enabled = true
-        default = "Licensed under CC BY-NC-SA 4.0"
-    
-[widgets]                         #小组件
-    homepage = [                  #首页右侧边栏显示
-        { type = "search" },
-        { type = "archives", params = { limit = 5 } },
-        { type = "categories", params = { limit = 10 } },
-        { type = "tag-cloud", params = { limit = 10 } },
-    ]
-    page = [{ type = "toc" }]      #文章页侧边栏显示：目录
-
-[opengraph.twitter]
-    site = ""
-    card = "summary_large_image"
-
-[colorScheme]
-    toggle  = true
-    default = "auto"
-    
-[comments]
-        enabled = false            #评论功能
-        #provider = "disqus"
+[RSS]
+    enableRSS = true
+    pageLimit = 20

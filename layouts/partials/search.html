@@ -1,0 +1,42 @@
+{{ $posts := where .Site.RegularPages "Section" "in" .Site.Params.mainSections }}
+{{ $posts = where $posts "Params.hidden" "ne" true }}
+<content>
+<label for="search-input" class="search-label">Search articles</label>
+<input id="search-input" type="search" placeholder="Search..." autocomplete="off">
+<p id="post-count" role="status" aria-live="polite">There {{ if eq (len $posts) 1 }}is 1 piece{{ else }}are {{ len $posts }} pieces{{ end }}.</p>
+<div class="tag-list" aria-label="Tags">
+{{ range .Site.Taxonomies.tags }}<a href="{{ .Page.RelPermalink }}">#{{ .Page.Title }}</a>{{ end }}
+</div>
+<div id="search-results" hidden>
+{{ range $posts.ByDate.Reverse.GroupByDate "2006" }}
+<section class="search-year">
+<h3>{{ .Key }}</h3>
+{{ partial "post-list.html" .Pages }}
+</section>
+{{ end }}
+</div>
+</content>
+<script>
+(() => {
+  const input = document.getElementById('search-input');
+  const count = document.getElementById('post-count');
+  const results = document.getElementById('search-results');
+  const groups = document.querySelectorAll('.search-year');
+  input.addEventListener('input', () => {
+    const query = input.value.trim().toLocaleLowerCase();
+    results.hidden = query.length === 0;
+    let total = 0;
+    for (const group of groups) {
+      let visible = 0;
+      for (const post of group.querySelectorAll('li')) {
+        const matches = post.querySelector('a').textContent.toLocaleLowerCase().includes(query);
+        post.style.display = matches ? '' : 'none';
+        if (matches) visible++;
+      }
+      group.hidden = visible === 0;
+      total += visible;
+    }
+    count.textContent = total === 1 ? 'There is 1 piece.' : `There are ${total} pieces.`;
+  });
+})();
+</script>

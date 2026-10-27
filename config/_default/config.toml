@@ -1,7 +1,7 @@
 baseURL = 'https://www.summernw33.com/'
 languageCode = 'zh'
 title = 'summernw33'
-theme = 'hugo-theme-stack'
+theme = 'hugo-bearneo'
 
 
 defaultContentLanguage = 'zh'

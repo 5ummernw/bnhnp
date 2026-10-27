@@ -1,5 +1,5 @@
 ---
-title: 🍊1月集｜书影音/成就                          #文章标题
+title: 1月集｜书影音/成就                          #文章标题
 description:                     #文章简介，显示在列表卡片摘要
 slug: 2026_January               #url的路径，例如domain/p/hello-word 
 date: 2026-01-31T16:10:40+09:00   #发布日期格式，影响排序

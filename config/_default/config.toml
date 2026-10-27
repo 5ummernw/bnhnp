@@ -9,4 +9,4 @@ hasCJKLanguage = true # Set hasCJKLanguage to true if DefaultContentLanguage is 
                       #This will make .Summary and .WordCount behave correctly for CJK languages.
 
 [pagination]
-    pagerSize = 5  
+    pagerSize = 8

@@ -8,7 +8,7 @@ image: "https://1bb9c6a.webp.li/2026/03/1c6a274444889b13a3868727f4507f18.jpeg"  
 categories:                      #分类
     - 日常
 tags:                            #标签，支持多个
-    - 随笔
+    - 散文
 weight:                        # You can add weight to some posts to override the default sorting (date descending) 权重，用于置顶或手动排序
 toc : true                       #文章目录
 draft : false                    #草稿

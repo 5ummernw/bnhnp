@@ -8,7 +8,7 @@ image:                 #封面图片，放在同文章目录下
 categories:                      #分类
     - Coding
 tags:                            #标签，支持多个
-    - how to
+    - howTo
 weight:                       # You can add weight to some posts to override the default sorting (date descending) 权重，用于置顶或手动排序
 toc : true                       #文章目录
 draft : false                    #草稿

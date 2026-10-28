@@ -1,3 +1,24 @@
+// Keep captions directly below centered photos, including handwritten figures.
+content figure {
+    margin: 1.5em 0;
+
+    > img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-inline: auto;
+    }
+
+    > figcaption {
+        margin-top: 0.6em;
+        text-align: center;
+        font-style: italic;
+        font-size: 0.8em;
+        color: var(--text-color-secondary);
+        overflow-wrap: anywhere;
+    }
+}
+
 //最后修改时间和阅读时间字体大小保持一致
 .article-time span {
     font-size: 1.4rem;

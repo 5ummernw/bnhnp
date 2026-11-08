@@ -5,7 +5,9 @@ favicon = 'img/favicon-round-v3-32.png'
 dateFormat = '2006-01-02'
 toc = true
 imageZoom = true
-upvote = false
+upvote = true
+# 部署 Kudos 后填写 HTTPS 服务地址；留空时不显示按钮。
+upvoteURL = 'https://kudos.summernw33.workers.dev'
 externalLinksNewTab = true # 正文中的外部链接在新标签页打开
 
 [author]

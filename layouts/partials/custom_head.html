@@ -77,6 +77,11 @@ ul.blog-posts .home-post-tags a:visited { color: var(--tag-text, #717783); }
 .db-card-title a { color: var(--link-color); }
 .db-card-rating { color: var(--text-color-secondary); font-size: .9rem; }
 .db-card-comment { font-size: 1rem; }
+.upvote-container { display: flex; align-items: center; gap: 12px; margin: 24px 0; }
+button.upvote-btn { min-width: 44px; min-height: 44px; }
+button.upvote-btn:disabled { cursor: wait; opacity: .6; }
+button.upvote-btn:focus-visible { outline: 2px solid var(--link-color); outline-offset: 4px; border-radius: 4px; }
+#upvote-status { color: var(--text-color-secondary); }
 pre { overflow-x: auto; }
 @media(max-width: 600px) { ul.blog-posts li span { flex: 0 0 100px; } .db-card-subject { flex-wrap: wrap; } }
 </style>

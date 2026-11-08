@@ -603,6 +603,28 @@
 <link rel="stylesheet" href="/scss/custom.css">
 <style>
 content { display: block; }
+.post-content figure { margin: 1.5rem auto; text-align: center; }
+.post-content img:not(.image-zoom-overlay img) {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(100%, 440px);
+  max-height: 55vh;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+}
+.post-content figcaption {
+  margin-top: 0.5rem;
+  color: color-mix(in srgb, var(--text-color-primary) 45%, var(--bg-color-primary));
+  font-size: 0.85em;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+}
+.post-content figcaption:not(:empty)::before { content: "（"; }
+.post-content figcaption:not(:empty)::after { content: "）"; }
+.post-content figcaption:empty { display: none; }
 .not-by-ai-badge { margin-top: 16px; }
 .not-by-ai-badge a { display: inline-block; }
 .not-by-ai-badge img { height: 42px; width: auto; max-width: 100%; border: 0; border-radius: 0; content-visibility: visible; }
@@ -658,7 +680,7 @@ pre { overflow-x: auto; }
 
  
 
-<content> <p>休息日打开小红书往往一刷就是3小时。最开始10分钟的内容还是和自己关心的事情强相关的，后面越来越偏向无聊的内容，引战标题党垃圾信息，让人身心疲惫，更加空虚。</p>
+<content class="post-content"> <p>休息日打开小红书往往一刷就是3小时。最开始10分钟的内容还是和自己关心的事情强相关的，后面越来越偏向无聊的内容，引战标题党垃圾信息，让人身心疲惫，更加空虚。</p>
 <p>鉴于小红书上的食谱/海外生活攻略有参考价值，我一直无法彻底将小红书从生活中抹去。</p>
 <p>因而我的戒掉小红书成瘾之路漫长。</p>
 <hr>
@@ -686,7 +708,7 @@ pre { overflow-x: auto; }
   推荐指数3/5
 </span>
 </p>
-<p>尝试过一段时间只在电脑端看小红书，但在通勤这样的场景根本忍不住，会重新下载回来畅玩。与其根除不如取平衡，后面发现这个谷歌浏览器插件，<a href="https://chromewebstore.google.com/detail/kcpdiafbdnphkbkpaplphnlfkknojfdo?utm_source=item-share-cb拓展" rel="noopener noreferrer">小红书纯净版 - Xiaohongshu Focus</a>
+<p>尝试过一段时间只在电脑端看小红书，但在通勤这样的场景根本忍不住，会重新下载回来畅玩。与其根除不如取平衡，后面发现这个谷歌浏览器插件，<a href="https://chromewebstore.google.com/detail/kcpdiafbdnphkbkpaplphnlfkknojfdo?utm_source=item-share-cb拓展" target="_blank" rel="noopener noreferrer">小红书纯净版 - Xiaohongshu Focus</a>
 ，屏蔽掉首页的信息流，只有用搜索的时候才会出现信息。也会起到一个冥想的作用，看到空白一片的主页会问自己，打开小红书是干嘛来着？从而有效减少乱刷的时间。
 问题和上一条个性化推荐一样，意志力薄弱的时候很容易关掉浏览器拓展。</p>
 <p>6.利用其他app强制锁～<span style="border-bottom: #ffd000 2px solid">
@@ -702,6 +724,32 @@ pre { overflow-x: auto; }
 <hr>
 <p>没想到居然写了7条出来，感觉对抗小红书已经不单单变成不用这个app，而是和自己的欲望和解，不被算法挟持。根除很困难，只能取平衡之法，慢慢的减少使用时间，淡化这件事情的存在感。</p>
  </content>
+<script>
+
+document.querySelectorAll('.post-content img[caption]').forEach((img) => {
+  const caption = img.getAttribute('caption').trim();
+  if (!caption) return;
+  let figure = img.closest('figure');
+  if (!figure) {
+    figure = document.createElement('figure');
+    
+    const parent = img.parentElement;
+    if (parent.tagName === 'P' && parent.childNodes.length === 1) {
+      parent.replaceWith(figure);
+    } else {
+      img.before(figure);
+    }
+    figure.append(img);
+  }
+  if (!figure.querySelector('figcaption')) {
+    const label = document.createElement('figcaption');
+    label.textContent = caption;
+    figure.append(label);
+  }
+  if (!img.alt) img.alt = caption;
+});
+</script>
+
 
 <p>
   

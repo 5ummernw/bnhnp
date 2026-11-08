@@ -603,6 +603,28 @@
 <link rel="stylesheet" href="/scss/custom.css">
 <style>
 content { display: block; }
+.post-content figure { margin: 1.5rem auto; text-align: center; }
+.post-content img:not(.image-zoom-overlay img) {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(100%, 440px);
+  max-height: 55vh;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+}
+.post-content figcaption {
+  margin-top: 0.5rem;
+  color: color-mix(in srgb, var(--text-color-primary) 45%, var(--bg-color-primary));
+  font-size: 0.85em;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+}
+.post-content figcaption:not(:empty)::before { content: "（"; }
+.post-content figcaption:not(:empty)::after { content: "）"; }
+.post-content figcaption:empty { display: none; }
 .not-by-ai-badge { margin-top: 16px; }
 .not-by-ai-badge a { display: inline-block; }
 .not-by-ai-badge img { height: 42px; width: auto; max-width: 100%; border: 0; border-radius: 0; content-visibility: visible; }
@@ -658,7 +680,7 @@ pre { overflow-x: auto; }
 
  
 
-<content> <p>三月份回国时在大连转机，回程时提前一天到大连，有了这趟2天一夜的小旅程。</p>
+<content class="post-content"> <p>三月份回国时在大连转机，回程时提前一天到大连，有了这趟2天一夜的小旅程。</p>
 <p>这次住宿选了机场附近的桔子酒店。第一次住华住会旗下的酒店，体验很好。房间的洗护用品全是橘子味道，喜欢橘子味道的洗护品的人不要错过。最近看到大家讨论国内的住宿，说尽量不要去住个人经营的酒店。想到上次回国去广州旅行，图便宜选过家庭经营式的酒店。房间实际和网站照片相差甚远，又脏又破，设施非常的烂。选酒店又加了一条标准，尽量选连锁酒店。</p>
 <p>大家推荐大连美食肯定会有海鲜，吃了两顿。鲅鱼水饺，海胆水饺。我吃水饺喜欢馅儿比较紧实的。用方言讲，一个个儿的。第一家是喜家德水饺，不太对胃口。他家水饺馅儿比较软塌。
 第二家是喜鼎。价格较贵，10元一个水饺。海胆水饺很腥但很好吃，推荐给喜欢吃海鲜的人。餐厅服务蛮好的但是加收了服务费。我是感觉这么贵的价格，你服务好是必须的，但是要单独服务收费就让人很不舒服。
@@ -687,6 +709,32 @@ pre { overflow-x: auto; }
 <p>纯粹的和妈妈两个人的旅行，不是去医院不是回姥姥家，还是第一次吧。旅途时光不总是愉快，因为餐厅点单和妈妈产生了摩擦。点了很贵的菜但她不舍得吃，上一辈人的饮食习惯在外食时表现尤为明显。想起之前看到：为什么大人不挑食？因为大人负责做饭点菜，只买他们爱吃的。</p>
 <p>综合推荐指数4颗星。从可玩性/环境整洁/饮食角度，大连个人评分4分（满分5分）。这次只探索了一个区域，下次还会再去。</p>
  </content>
+<script>
+
+document.querySelectorAll('.post-content img[caption]').forEach((img) => {
+  const caption = img.getAttribute('caption').trim();
+  if (!caption) return;
+  let figure = img.closest('figure');
+  if (!figure) {
+    figure = document.createElement('figure');
+    
+    const parent = img.parentElement;
+    if (parent.tagName === 'P' && parent.childNodes.length === 1) {
+      parent.replaceWith(figure);
+    } else {
+      img.before(figure);
+    }
+    figure.append(img);
+  }
+  if (!figure.querySelector('figcaption')) {
+    const label = document.createElement('figcaption');
+    label.textContent = caption;
+    figure.append(label);
+  }
+  if (!img.alt) img.alt = caption;
+});
+</script>
+
 
 <p>
   

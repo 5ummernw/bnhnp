@@ -612,6 +612,28 @@
 <link rel="stylesheet" href="/scss/custom.css">
 <style>
 content { display: block; }
+.post-content figure { margin: 1.5rem auto; text-align: center; }
+.post-content img:not(.image-zoom-overlay img) {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(100%, 440px);
+  max-height: 55vh;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+}
+.post-content figcaption {
+  margin-top: 0.5rem;
+  color: color-mix(in srgb, var(--text-color-primary) 45%, var(--bg-color-primary));
+  font-size: 0.85em;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+}
+.post-content figcaption:not(:empty)::before { content: "（"; }
+.post-content figcaption:not(:empty)::after { content: "）"; }
+.post-content figcaption:empty { display: none; }
 .not-by-ai-badge { margin-top: 16px; }
 .not-by-ai-badge a { display: inline-block; }
 .not-by-ai-badge img { height: 42px; width: auto; max-width: 100%; border: 0; border-radius: 0; content-visibility: visible; }
@@ -667,7 +689,7 @@ pre { overflow-x: auto; }
 
  
 
-<content> <p>晚上洗澡时若有所思。</p>
+<content class="post-content"> <p>晚上洗澡时若有所思。</p>
 <p>写说下背景信息，现在的打工基本上一周出勤4天，剩余的3天去学校。
 因为是服务行业，上班的前一天晚上是一定要洗头发的。</p>
 <p>在不上班时我不愿意洗头发，这是我心里的抗争。哪怕理性知道清爽的头发会感觉舒服。偶尔两连休的时候我顶着油头去上学，头皮痒的难受、掉头发、头发塌，我也不想洗头发。</p>
@@ -679,6 +701,32 @@ pre { overflow-x: auto; }
 <p>把前面的部分发给Gemini，她说，这是“防御性懒惰”，工作日不得不保持精致，而休息日夺回主权，用不洗头划分界线，这是完全属于我的时间。如果抗争到感觉不舒服（头痒掉发），可以重新定义“洗头发”，从为了好看洗头变成为了舒服洗头。</p>
 </blockquote>
  </content>
+<script>
+
+document.querySelectorAll('.post-content img[caption]').forEach((img) => {
+  const caption = img.getAttribute('caption').trim();
+  if (!caption) return;
+  let figure = img.closest('figure');
+  if (!figure) {
+    figure = document.createElement('figure');
+    
+    const parent = img.parentElement;
+    if (parent.tagName === 'P' && parent.childNodes.length === 1) {
+      parent.replaceWith(figure);
+    } else {
+      img.before(figure);
+    }
+    figure.append(img);
+  }
+  if (!figure.querySelector('figcaption')) {
+    const label = document.createElement('figcaption');
+    label.textContent = caption;
+    figure.append(label);
+  }
+  if (!img.alt) img.alt = caption;
+});
+</script>
+
 
 <p>
   

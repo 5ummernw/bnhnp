@@ -611,6 +611,28 @@
 <link rel="stylesheet" href="/scss/custom.css">
 <style>
 content { display: block; }
+.post-content figure { margin: 1.5rem auto; text-align: center; }
+.post-content img:not(.image-zoom-overlay img) {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(100%, 440px);
+  max-height: 55vh;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+}
+.post-content figcaption {
+  margin-top: 0.5rem;
+  color: color-mix(in srgb, var(--text-color-primary) 45%, var(--bg-color-primary));
+  font-size: 0.85em;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+}
+.post-content figcaption:not(:empty)::before { content: "（"; }
+.post-content figcaption:not(:empty)::after { content: "）"; }
+.post-content figcaption:empty { display: none; }
 .not-by-ai-badge { margin-top: 16px; }
 .not-by-ai-badge a { display: inline-block; }
 .not-by-ai-badge img { height: 42px; width: auto; max-width: 100%; border: 0; border-radius: 0; content-visibility: visible; }
@@ -666,13 +688,13 @@ pre { overflow-x: auto; }
 
  
 
-<content> <p>pandoc是obsidian的第三方插件，拓展性强的文件导出插件。</p>
+<content class="post-content"> <p>pandoc是obsidian的第三方插件，拓展性强的文件导出插件。</p>
 <details>
   <summary>0.前言</summary>
   重新开始用Obsidian做内容管理/优秀文章收集器。为此，想把两年前写的零碎的内容删除。删除之前做个存档。ob自己的导出选择性少，于是配置了pandoc这个插件。
 </details>
 <p>1.安装pandoc</p>
-<p>进入pandoc<a href="https://pandoc.org/installing.html" rel="noopener noreferrer">官网</a>
+<p>进入pandoc<a href="https://pandoc.org/installing.html" target="_blank" rel="noopener noreferrer">官网</a>
 ，根据OS版本选择对应下载方式。</p>
 <p>MacOS的下载方式，目前官网（2026/8/8）只有Intel芯片的安装包（x86_64）。M芯片的安装方法是使用homebrew:
 <code>homebrew install pandoc</code></p>
@@ -701,6 +723,32 @@ pre { overflow-x: auto; }
 <hr>
 <p>see you again~</p>
  </content>
+<script>
+
+document.querySelectorAll('.post-content img[caption]').forEach((img) => {
+  const caption = img.getAttribute('caption').trim();
+  if (!caption) return;
+  let figure = img.closest('figure');
+  if (!figure) {
+    figure = document.createElement('figure');
+    
+    const parent = img.parentElement;
+    if (parent.tagName === 'P' && parent.childNodes.length === 1) {
+      parent.replaceWith(figure);
+    } else {
+      img.before(figure);
+    }
+    figure.append(img);
+  }
+  if (!figure.querySelector('figcaption')) {
+    const label = document.createElement('figcaption');
+    label.textContent = caption;
+    figure.append(label);
+  }
+  if (!img.alt) img.alt = caption;
+});
+</script>
+
 
 <p>
   

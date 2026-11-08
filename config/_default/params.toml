@@ -6,6 +6,7 @@ dateFormat = '2006-01-02'
 toc = true
 imageZoom = true
 upvote = false
+externalLinksNewTab = true # 正文中的外部链接在新标签页打开
 
 [author]
     name = 'summernw33'
@@ -18,3 +19,4 @@ upvote = false
 [RSS]
     enableRSS = true
     pageLimit = 20
+

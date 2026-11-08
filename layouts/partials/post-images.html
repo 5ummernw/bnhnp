@@ -1,0 +1,25 @@
+<script>
+// Support caption attributes on images pasted directly into Markdown.
+document.querySelectorAll('.post-content img[caption]').forEach((img) => {
+  const caption = img.getAttribute('caption').trim();
+  if (!caption) return;
+  let figure = img.closest('figure');
+  if (!figure) {
+    figure = document.createElement('figure');
+    // Keep figures outside paragraph elements.
+    const parent = img.parentElement;
+    if (parent.tagName === 'P' && parent.childNodes.length === 1) {
+      parent.replaceWith(figure);
+    } else {
+      img.before(figure);
+    }
+    figure.append(img);
+  }
+  if (!figure.querySelector('figcaption')) {
+    const label = document.createElement('figcaption');
+    label.textContent = caption;
+    figure.append(label);
+  }
+  if (!img.alt) img.alt = caption;
+});
+</script>

@@ -607,6 +607,28 @@
 <link rel="stylesheet" href="/scss/custom.css">
 <style>
 content { display: block; }
+.post-content figure { margin: 1.5rem auto; text-align: center; }
+.post-content img:not(.image-zoom-overlay img) {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(100%, 440px);
+  max-height: 55vh;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+}
+.post-content figcaption {
+  margin-top: 0.5rem;
+  color: color-mix(in srgb, var(--text-color-primary) 45%, var(--bg-color-primary));
+  font-size: 0.85em;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+}
+.post-content figcaption:not(:empty)::before { content: "（"; }
+.post-content figcaption:not(:empty)::after { content: "）"; }
+.post-content figcaption:empty { display: none; }
 .not-by-ai-badge { margin-top: 16px; }
 .not-by-ai-badge a { display: inline-block; }
 .not-by-ai-badge img { height: 42px; width: auto; max-width: 100%; border: 0; border-radius: 0; content-visibility: visible; }
@@ -662,7 +684,7 @@ pre { overflow-x: auto; }
 
  
 
-<content> <p>因上传豆瓣的数据到neodb发现自己写过的两篇稚嫩的书评，删掉豆瓣上的内容，在博客做个存档。</p>
+<content class="post-content"> <p>因上传豆瓣的数据到neodb发现自己写过的两篇稚嫩的书评，删掉豆瓣上的内容，在博客做个存档。</p>
 <p>我对自己过去写过的内容总是伴随着巨大的羞耻心。想到写的内容被人发现，被人阅读脸上就会变得火辣辣。可是，我又想通过写文字来实现点什么。或许是羡慕且想成为只靠写文字获得大量粉丝的人。可是我写的文章从小到大的语文课上都不是被夸奖的一个。</p>
 <p>我在乎别人的目光。与其说是这个，我更擅长，在开始写作前时，畅想写作为我带来的掌声。而实际上，我资质平平。
 今天听播客，主播讲到要对自己真。对自己真，自己才能够丰满起来，满溢出来了才能分享给别人。我希望通过自己的行动产生影响，唯一且有效的方式是，对自己真。
@@ -749,6 +771,32 @@ pre { overflow-x: auto; }
 <p>-对于物品，三种状态可以选择：现在就面对；总有一天会面对；到死都不面对。对恐惧也是如此，之前微博看到过一句话，大意是说，你现在因为恐惧而逃避的事情，它可能总会换种形式重新出现，让你进行面对（语言表达力好弱）。</p>
 <p>-人与物品的缘分和人与人之间的缘分一样，珍贵而不易得。</p>
  </content>
+<script>
+
+document.querySelectorAll('.post-content img[caption]').forEach((img) => {
+  const caption = img.getAttribute('caption').trim();
+  if (!caption) return;
+  let figure = img.closest('figure');
+  if (!figure) {
+    figure = document.createElement('figure');
+    
+    const parent = img.parentElement;
+    if (parent.tagName === 'P' && parent.childNodes.length === 1) {
+      parent.replaceWith(figure);
+    } else {
+      img.before(figure);
+    }
+    figure.append(img);
+  }
+  if (!figure.querySelector('figcaption')) {
+    const label = document.createElement('figcaption');
+    label.textContent = caption;
+    figure.append(label);
+  }
+  if (!img.alt) img.alt = caption;
+});
+</script>
+
 
 <p>
   
@@ -768,10 +816,10 @@ pre { overflow-x: auto; }
 
 <aside class="toc-nav" role="navigation" aria-label="目录">
   <nav id="TableOfContents">
-  <ol>
+  <ul>
     <li><a href="#一">一</a></li>
     <li><a href="#二">二</a></li>
-  </ol>
+  </ul>
 </nav>
 </aside>
 

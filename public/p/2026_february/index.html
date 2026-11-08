@@ -603,6 +603,28 @@
 <link rel="stylesheet" href="/scss/custom.css">
 <style>
 content { display: block; }
+.post-content figure { margin: 1.5rem auto; text-align: center; }
+.post-content img:not(.image-zoom-overlay img) {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(100%, 440px);
+  max-height: 55vh;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+}
+.post-content figcaption {
+  margin-top: 0.5rem;
+  color: color-mix(in srgb, var(--text-color-primary) 45%, var(--bg-color-primary));
+  font-size: 0.85em;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+}
+.post-content figcaption:not(:empty)::before { content: "（"; }
+.post-content figcaption:not(:empty)::after { content: "）"; }
+.post-content figcaption:empty { display: none; }
 .not-by-ai-badge { margin-top: 16px; }
 .not-by-ai-badge a { display: inline-block; }
 .not-by-ai-badge img { height: 42px; width: auto; max-width: 100%; border: 0; border-radius: 0; content-visibility: visible; }
@@ -658,7 +680,7 @@ pre { overflow-x: auto; }
 
  
 
-<content> <h2 id="heading">❄️</h2>
+<content class="post-content"> <h2 id="heading">❄️</h2>
 <p>2月7-8号东京久违的下了一场大雪。上次看到大雪还是在北海道，再之前是读研究生时有一天zemi结束后下了很大的雪，和学妹推着自行车走去车站。</p>
 <figure class="image-caption">
   <img src="https://1bb9c6a.webp.li/2026/03/85d75281499f7871e831cd3e0c2bee89.jpeg" 
@@ -1155,18 +1177,44 @@ pre { overflow-x: auto; }
 
 <p>一开始读的云里雾里，不得不去网上搜这部书，也被剧透了。如果坚持不去搜而读完全部内容，应该会更震撼。</p>
 <h2 id="音乐">🎵音乐</h2>
-<p>⏸️<a href="https://music.apple.com/jp/song/ladies-and-gentlemen-we-are-floating-in-space/1502476617" rel="noopener noreferrer">ladies and gentlemen ,we are floating in the space</a>
+<p>⏸️<a href="https://music.apple.com/jp/song/ladies-and-gentlemen-we-are-floating-in-space/1502476617" target="_blank" rel="noopener noreferrer">ladies and gentlemen ,we are floating in the space</a>
 </p>
 <p>在回乡记里写到了这首歌，是听到会平静下来的歌。</p>
 <h2 id="展">🖼️展</h2>
-<p><a href="https://www.city.fuchu.tokyo.jp/art/tenrankai/kikakuten/koide_narashige.html" rel="noopener noreferrer">小出楢重　新しき油絵</a>
+<p><a href="https://www.city.fuchu.tokyo.jp/art/tenrankai/kikakuten/koide_narashige.html" target="_blank" rel="noopener noreferrer">小出楢重　新しき油絵</a>
 </p>
 <p>府中市美术馆市离家最近的较大型美术馆，刚搬到现在的住处时想去的美术馆，拖了3年终于拜访了。</p>
 <p>小出楢重是日本近代的洋画家，代表作是裸女画（nude）。他这一代的画家，在吸收西方油画的过程中，逐渐将西方裸女形象变成日本女性的身体，也体现了日本现代化的转变。</p>
 <h2 id="推荐">推荐</h2>
-<p>另外在找上面的展的资料的时候发现了，<a href="https://www.tokyoartbeat.com" rel="noopener noreferrer">TOKYO ART BEAT</a>
+<p>另外在找上面的展的资料的时候发现了，<a href="https://www.tokyoartbeat.com" target="_blank" rel="noopener noreferrer">TOKYO ART BEAT</a>
 这个网站。虽然名字里带了东京，但汇总日本各地的展会信息，是我目前看到过UI设计最舒服的网站。有日语和英语版，很推荐常居日本或来日本旅游找展览信息时用。</p>
  </content>
+<script>
+
+document.querySelectorAll('.post-content img[caption]').forEach((img) => {
+  const caption = img.getAttribute('caption').trim();
+  if (!caption) return;
+  let figure = img.closest('figure');
+  if (!figure) {
+    figure = document.createElement('figure');
+    
+    const parent = img.parentElement;
+    if (parent.tagName === 'P' && parent.childNodes.length === 1) {
+      parent.replaceWith(figure);
+    } else {
+      img.before(figure);
+    }
+    figure.append(img);
+  }
+  if (!figure.querySelector('figcaption')) {
+    const label = document.createElement('figcaption');
+    label.textContent = caption;
+    figure.append(label);
+  }
+  if (!img.alt) img.alt = caption;
+});
+</script>
+
 
 <p>
   
@@ -1186,14 +1234,14 @@ pre { overflow-x: auto; }
 
 <aside class="toc-nav" role="navigation" aria-label="目录">
   <nav id="TableOfContents">
-  <ol>
+  <ul>
     <li><a href="#heading">❄️</a></li>
     <li><a href="#影视">📺影视</a></li>
     <li><a href="#书籍">📚书籍</a></li>
     <li><a href="#音乐">🎵音乐</a></li>
     <li><a href="#展">🖼️展</a></li>
     <li><a href="#推荐">推荐</a></li>
-  </ol>
+  </ul>
 </nav>
 </aside>
 

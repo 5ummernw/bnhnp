@@ -603,6 +603,28 @@
 <link rel="stylesheet" href="/scss/custom.css">
 <style>
 content { display: block; }
+.post-content figure { margin: 1.5rem auto; text-align: center; }
+.post-content img:not(.image-zoom-overlay img) {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(100%, 440px);
+  max-height: 55vh;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+}
+.post-content figcaption {
+  margin-top: 0.5rem;
+  color: color-mix(in srgb, var(--text-color-primary) 45%, var(--bg-color-primary));
+  font-size: 0.85em;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+}
+.post-content figcaption:not(:empty)::before { content: "（"; }
+.post-content figcaption:not(:empty)::after { content: "）"; }
+.post-content figcaption:empty { display: none; }
 .not-by-ai-badge { margin-top: 16px; }
 .not-by-ai-badge a { display: inline-block; }
 .not-by-ai-badge img { height: 42px; width: auto; max-width: 100%; border: 0; border-radius: 0; content-visibility: visible; }
@@ -658,11 +680,11 @@ pre { overflow-x: auto; }
 
  
 
-<content> <p>春节那周回家了，时隔两年。</p>
+<content class="post-content"> <p>春节那周回家了，时隔两年。</p>
 <h2 id="回国前的不安">回国前的不安</h2>
 <p>去年12月左右决定请带薪休假回国过年后，开始接了点代购的小生意。因为养过鹦鹉，潜入小红书的群，帮大家做起了小鸟周边的代购。这次回国也是把最近两个月代购的东西带回去。回国前的一周左右非常焦虑，一是用了信用卡的优待，提前5天让快递上门把行李送到了机场。虽然很信任日本的服务，但第一次用，不熟悉流程，很担心丢东西。二是前一天晚上下班直接从公司出发，不再回家检查，让我很不安。三是现在用的iPhone17pro不支持esim，虽然在家用6s放国内的电话卡，回国也带了两部手机回去，理性知道不会太影响，但难免不安。好在最后担心都没有变成问题。</p>
 <h2 id="ana乘机体验">ANA乘机体验</h2>
-<p>在<a href="https://summernw33.com/posts/good-buy-1/" rel="noopener noreferrer">Good Buy（1）</a>
+<p>在<a href="https://summernw33.com/posts/good-buy-1/" target="_blank" rel="noopener noreferrer">Good Buy（1）</a>
 里提到过用ANA里程兑换了这次回去的往返机票，也是我第一次ANA乘机。座位前的小电视，毯子和枕头，作为只坐过日本廉航的人，第一次这样的待遇，很满足。飞机滑行时看相机，有种在开飞机的感觉（？也因此对飞机滑行这段产生了兴趣，打算回来找相关的科普（后续：并没有找到合适的内容）。</p>
 <p>整趟大概4小时左右的航程，飞行上升到平稳的高度后，开始发放飞机餐。日式汉堡餐，平平无奇的美味！</p>
 <figure class="image-caption">
@@ -675,7 +697,7 @@ pre { overflow-x: auto; }
    
  </figure>
 
-<p>提前网上选座选的是中间靠窗位置，引擎轰隆隆的声音很大，这次飞行又体验到AirPods降噪的好处，把轰隆隆的声音消解掉。在半睡半醒间听音乐播客听到标题歌曲，直击心灵。请听：<a href="https://music.apple.com/jp/song/ladies-and-gentlemen-we-are-floating-in-space/1502476617" rel="noopener noreferrer">ladies and gentlemen ,we are floating in the space</a>
+<p>提前网上选座选的是中间靠窗位置，引擎轰隆隆的声音很大，这次飞行又体验到AirPods降噪的好处，把轰隆隆的声音消解掉。在半睡半醒间听音乐播客听到标题歌曲，直击心灵。请听：<a href="https://music.apple.com/jp/song/ladies-and-gentlemen-we-are-floating-in-space/1502476617" target="_blank" rel="noopener noreferrer">ladies and gentlemen ,we are floating in the space</a>
 </p>
 <p>出发时天气不算好，飞机飞高后一直潜在云层里。到达飞行高度后太阳出来了，拍到了很清楚的富士山！</p>
 <figure class="image-caption">
@@ -709,6 +731,32 @@ pre { overflow-x: auto; }
 <h2 id="休息">休息</h2>
 <p>在家待的完整三天有一天休息的特别好。那天爸妈不在家，我自己一个人吃了早饭午饭，中午和猫猫一起睡了午觉，晚上和朋友出门吃饭，并拒绝了爸妈的电话骚扰，过得很开心。在journal里详细记录了每一天的感受，实际上回顾来看，回家5天的情绪波动不大，也狠狠的休息好了。</p>
  </content>
+<script>
+
+document.querySelectorAll('.post-content img[caption]').forEach((img) => {
+  const caption = img.getAttribute('caption').trim();
+  if (!caption) return;
+  let figure = img.closest('figure');
+  if (!figure) {
+    figure = document.createElement('figure');
+    
+    const parent = img.parentElement;
+    if (parent.tagName === 'P' && parent.childNodes.length === 1) {
+      parent.replaceWith(figure);
+    } else {
+      img.before(figure);
+    }
+    figure.append(img);
+  }
+  if (!figure.querySelector('figcaption')) {
+    const label = document.createElement('figcaption');
+    label.textContent = caption;
+    figure.append(label);
+  }
+  if (!img.alt) img.alt = caption;
+});
+</script>
+
 
 <p>
   
@@ -728,14 +776,14 @@ pre { overflow-x: auto; }
 
 <aside class="toc-nav" role="navigation" aria-label="目录">
   <nav id="TableOfContents">
-  <ol>
+  <ul>
     <li><a href="#回国前的不安">回国前的不安</a></li>
     <li><a href="#ana乘机体验">ANA乘机体验</a></li>
     <li><a href="#吃吃吃肚子痛">吃吃吃→肚子痛</a></li>
     <li><a href="#出门玩">出门玩</a></li>
     <li><a href="#家庭观察">家庭观察</a></li>
     <li><a href="#休息">休息</a></li>
-  </ol>
+  </ul>
 </nav>
 </aside>
 

@@ -34,8 +34,8 @@
 
   <meta itemprop="name" content="summernw33">
   <meta itemprop="description" content="这里是我生活的A面。">
-  <meta itemprop="datePublished" content="2026-10-27T21:45:06+09:00">
-  <meta itemprop="dateModified" content="2026-10-27T21:45:06+09:00">
+  <meta itemprop="datePublished" content="2026-11-08T00:00:00+09:00">
+  <meta itemprop="dateModified" content="2026-11-08T00:00:00+09:00">
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
   <link rel="alternate" type="application/rss+xml" href="https://www.summernw33.com/index.xml" title="summernw33" />
@@ -599,6 +599,28 @@
 <link rel="stylesheet" href="/scss/custom.css">
 <style>
 content { display: block; }
+.post-content figure { margin: 1.5rem auto; text-align: center; }
+.post-content img:not(.image-zoom-overlay img) {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(100%, 440px);
+  max-height: 55vh;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+}
+.post-content figcaption {
+  margin-top: 0.5rem;
+  color: color-mix(in srgb, var(--text-color-primary) 45%, var(--bg-color-primary));
+  font-size: 0.85em;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+}
+.post-content figcaption:not(:empty)::before { content: "（"; }
+.post-content figcaption:not(:empty)::after { content: "）"; }
+.post-content figcaption:empty { display: none; }
 .not-by-ai-badge { margin-top: 16px; }
 .not-by-ai-badge a { display: inline-block; }
 .not-by-ai-badge img { height: 42px; width: auto; max-width: 100%; border: 0; border-radius: 0; content-visibility: visible; }
@@ -648,6 +670,13 @@ pre { overflow-x: auto; }
   <h3>✨ New</h3>
   
   <ul>
+    
+    <li>
+      <a href="/p/2026huxi/">mini trip：上海与无锡</a>
+      
+      <small class="home-post-tags"><a href="/tags/%E6%95%A3%E6%AD%A5/" data-tag="散步">散步</a></small>
+      
+    </li>
     
     <li>
       <a href="/p/202610death/">宣告死亡</a>
@@ -707,13 +736,6 @@ pre { overflow-x: auto; }
     
     <li>
       <a href="/p/2026_march/">3月集｜3月是离别的季节</a>
-      
-      <small class="home-post-tags"><a href="/tags/recap/" data-tag="recap">Recap</a></small>
-      
-    </li>
-    
-    <li>
-      <a href="/p/2026_february/">2月集｜书影音展/成就</a>
       
       <small class="home-post-tags"><a href="/tags/recap/" data-tag="recap">Recap</a></small>
       

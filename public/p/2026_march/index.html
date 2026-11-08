@@ -604,6 +604,28 @@
 <link rel="stylesheet" href="/scss/custom.css">
 <style>
 content { display: block; }
+.post-content figure { margin: 1.5rem auto; text-align: center; }
+.post-content img:not(.image-zoom-overlay img) {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(100%, 440px);
+  max-height: 55vh;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+}
+.post-content figcaption {
+  margin-top: 0.5rem;
+  color: color-mix(in srgb, var(--text-color-primary) 45%, var(--bg-color-primary));
+  font-size: 0.85em;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+}
+.post-content figcaption:not(:empty)::before { content: "（"; }
+.post-content figcaption:not(:empty)::after { content: "）"; }
+.post-content figcaption:empty { display: none; }
 .not-by-ai-badge { margin-top: 16px; }
 .not-by-ai-badge a { display: inline-block; }
 .not-by-ai-badge img { height: 42px; width: auto; max-width: 100%; border: 0; border-radius: 0; content-visibility: visible; }
@@ -659,12 +681,12 @@ pre { overflow-x: auto; }
 
  
 
-<content> <h2 id="告别">🎓告别</h2>
+<content class="post-content"> <h2 id="告别">🎓告别</h2>
 <p>3月是日本的毕业季，我也迎来了修士毕业。当学生的时间太长，加上这两三年被迫无偿劳动，没有假期，对学生生活产生了厌恶。想加速进入打工人生活，想有属于自己的完整假期。</p>
 <p>告别了学校。同时，告别了在A社的兼职，告别了3年的感情生活。</p>
 <h2 id="迎新">迎新</h2>
 <p>3月增加了新的东西。</p>
-<p>换掉了用了3年多的旧冰箱（电脑的实际使用年限已经13年）。用东京都的换新折扣买了新的冰箱，<a href="https://panasonic.jp/reizo/products/NR-C37ES2.html" rel="noopener noreferrer">松下NRC37ES2</a>
+<p>换掉了用了3年多的旧冰箱（电脑的实际使用年限已经13年）。用东京都的换新折扣买了新的冰箱，<a href="https://panasonic.jp/reizo/products/NR-C37ES2.html" target="_blank" rel="noopener noreferrer">松下NRC37ES2</a>
 。</p>
 <p>最后一次用员工折扣买了iPad mini，卖掉了iPad Air。Air时期我iPad使用频率大概在1～2周一次，换成iPad mini使用频率明显提高。轻轻的，爱不释手。
 <figure class="image-caption">
@@ -705,7 +727,7 @@ pre { overflow-x: auto; }
 
 寺庙有卖各种尺寸的招财猫，mini的招财猫价格500日元，价格公道。但是我们下午去已经售罄了。整体来说，适合想看传统日本景观/刚好离得不远的人。整个游玩体验能给4/5分。</p>
 <p>❀ 吉祥寺散步</p>
-<p>和研究室学妹毕业前的聚会，午饭吃的<a href="https://maps.app.goo.gl/od92fEXoDeBTBy7D6" rel="noopener noreferrer">餐厅</a>
+<p>和研究室学妹毕业前的聚会，午饭吃的<a href="https://maps.app.goo.gl/od92fEXoDeBTBy7D6" target="_blank" rel="noopener noreferrer">餐厅</a>
 ，推荐。第二次去这家了，牛肉松软有弹力，好嚼。烤蒜酥脆没有辣辣的味道。
 <figure class="image-caption">
   <img src="https://1bb9c6a.webp.li/2026/04/c77debcd5b7cf419e8405eb868d33fbc.jpeg" 
@@ -730,7 +752,7 @@ pre { overflow-x: auto; }
 
 在井之头公园看到了研究室豚鼠的亲人。仍然忘不了刚进园区的震撼，看到展示的是鸭子，山羊这些老家常见的家畜。</p>
 <p>❀ 机场前夜一泊</p>
-<p>毕业式结束后回国参加表哥婚礼，为了赶早上飞机，在成田机场附近定了4星级酒店，<a href="https://maps.app.goo.gl/CjWRgoDUTTjYQFoj8" rel="noopener noreferrer">ART Hotel</a>
+<p>毕业式结束后回国参加表哥婚礼，为了赶早上飞机，在成田机场附近定了4星级酒店，<a href="https://maps.app.goo.gl/CjWRgoDUTTjYQFoj8" target="_blank" rel="noopener noreferrer">ART Hotel</a>
 。
 <figure class="image-caption">
   <img src="https://1bb9c6a.webp.li/2026/04/832ca45edf62aa62eb2b2e3d15e369c8.jpeg" 
@@ -1163,24 +1185,24 @@ pre { overflow-x: auto; }
 
 
 <h2 id="播客">🎧播客</h2>
-<p>▶ <a href="https://www.xiaoyuzhoufm.com/episode/68512cbf2a38b4d9791824a7?utm_source=rss" rel="noopener noreferrer">S7E9 鲁豫对话小帕 | 要走多少路，才能成为一个女人，答案在风中飘荡</a>
+<p>▶ <a href="https://www.xiaoyuzhoufm.com/episode/68512cbf2a38b4d9791824a7?utm_source=rss" target="_blank" rel="noopener noreferrer">S7E9 鲁豫对话小帕 | 要走多少路，才能成为一个女人，答案在风中飘荡</a>
 </p>
 <p>shownotes里说小帕是用笑织就铠甲，看她的脱口秀经常笑中带泪。小帕对自己身为女性的生活观察的很细致，一针见血，</p>
 <hr>
-<p>▶<a href="https://sv101.fireside.fm/203" rel="noopener noreferrer">硅谷101 - E193｜吃益生菌是智商税吗？全面复盘肠道健康迷思</a>
+<p>▶<a href="https://sv101.fireside.fm/203" target="_blank" rel="noopener noreferrer">硅谷101 - E193｜吃益生菌是智商税吗？全面复盘肠道健康迷思</a>
 </p>
 <p>女嘉宾讲解的太好了，科普理应如此。主持人的提问也有深度。记住的一个点是益生菌对肠道健康有益，我们应该多吃酸奶、泡菜等发酵食品。</p>
 <hr>
-<p>▶<a href="https://www.ximalaya.com/sound/811572087" rel="noopener noreferrer">除你武器 - 054｜健身教练对我说，都是自律害了我</a>
+<p>▶<a href="https://www.ximalaya.com/sound/811572087" target="_blank" rel="noopener noreferrer">除你武器 - 054｜健身教练对我说，都是自律害了我</a>
 </p>
 <p>讲了女性去健身房的一些认知，健身器械/健身知识是为男性设计的，为女性健身的内容的实在是太少了。记住了一个点是，要倾听自己的身体，不想去健身房的时候可以不去。</p>
 <hr>
 <p>❀ 1～2月听到的一些不错的博客，我也一起贴上来。</p>
-<p>▶<a href="https://www.xiaoyuzhoufm.com/episode/699669afde29766da9e5efa4" rel="noopener noreferrer">E14: 日本四大品牌的啤酒江湖</a>
+<p>▶<a href="https://www.xiaoyuzhoufm.com/episode/699669afde29766da9e5efa4" target="_blank" rel="noopener noreferrer">E14: 日本四大品牌的啤酒江湖</a>
 </p>
 <p>日本啤酒4大家，Asahi、Kirin、Sapporo、Suntory。每次聚餐身边总是不乏点啤酒的人，了解一下日本啤酒的发展史满有意思。能成为饭桌上的谈资（不是</p>
 <hr>
-<p>▶<a href="https://www.xiaoyuzhoufm.com/episode/691481ac6018cc2c9885eaa1" rel="noopener noreferrer">012. 全季酒店：取一瓢东方美学，成全现代人的体面</a>
+<p>▶<a href="https://www.xiaoyuzhoufm.com/episode/691481ac6018cc2c9885eaa1" target="_blank" rel="noopener noreferrer">012. 全季酒店：取一瓢东方美学，成全现代人的体面</a>
 </p>
 <p>介绍全季酒店和背后故事的一期。对国内的酒店行业不了解，这算是一个小小的敲门砖。上次回国选择了全季酒店的集团，华住会，旗下的另一家酒店，桔子酒店。</p>
 <hr>
@@ -1279,11 +1301,37 @@ pre { overflow-x: auto; }
 
 听了好几期。打鸡血博客（褒义）。不知道听什么的时候/洗澡的时候会放来听</p>
 <hr>
-<p>▶<a href="https://www.xiaoyuzhoufm.com/episode/6981cefb9533218f9af107bb?utm_source=rss" rel="noopener noreferrer">316 除了“独居”或“结婚”，女性还有什么生活选择？</a>
+<p>▶<a href="https://www.xiaoyuzhoufm.com/episode/6981cefb9533218f9af107bb?utm_source=rss" target="_blank" rel="noopener noreferrer">316 除了“独居”或“结婚”，女性还有什么生活选择？</a>
 </p>
 <p>找独居相关话题发现的播客。东亚女性一起生活的另一种答案。另外主播讲的很有条理。</p>
 <hr>
  </content>
+<script>
+
+document.querySelectorAll('.post-content img[caption]').forEach((img) => {
+  const caption = img.getAttribute('caption').trim();
+  if (!caption) return;
+  let figure = img.closest('figure');
+  if (!figure) {
+    figure = document.createElement('figure');
+    
+    const parent = img.parentElement;
+    if (parent.tagName === 'P' && parent.childNodes.length === 1) {
+      parent.replaceWith(figure);
+    } else {
+      img.before(figure);
+    }
+    figure.append(img);
+  }
+  if (!figure.querySelector('figcaption')) {
+    const label = document.createElement('figcaption');
+    label.textContent = caption;
+    figure.append(label);
+  }
+  if (!img.alt) img.alt = caption;
+});
+</script>
+
 
 <p>
   
@@ -1303,14 +1351,14 @@ pre { overflow-x: auto; }
 
 <aside class="toc-nav" role="navigation" aria-label="目录">
   <nav id="TableOfContents">
-  <ol>
+  <ul>
     <li><a href="#告别">🎓告别</a></li>
     <li><a href="#迎新">迎新</a></li>
     <li><a href="#plog">Plog</a></li>
     <li><a href="#书籍">📚书籍</a></li>
     <li><a href="#影视">📺影视</a></li>
     <li><a href="#播客">🎧播客</a></li>
-  </ol>
+  </ul>
 </nav>
 </aside>
 

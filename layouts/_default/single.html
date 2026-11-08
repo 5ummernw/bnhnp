@@ -14,7 +14,8 @@
 {{ end }}
 {{ end }} 
 
-<content> {{ .Content }} </content>
+<content{{ if eq .Section "post" }} class="post-content"{{ end }}> {{ .Content }} </content>
+{{ if eq .Section "post" }}{{ partial "post-images.html" . }}{{ end }}
 
 <p>
   {{ range (.GetTerms "tags") }}

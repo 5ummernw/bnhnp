@@ -610,6 +610,28 @@
 <link rel="stylesheet" href="/scss/custom.css">
 <style>
 content { display: block; }
+.post-content figure { margin: 1.5rem auto; text-align: center; }
+.post-content img:not(.image-zoom-overlay img) {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(100%, 440px);
+  max-height: 55vh;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+}
+.post-content figcaption {
+  margin-top: 0.5rem;
+  color: color-mix(in srgb, var(--text-color-primary) 45%, var(--bg-color-primary));
+  font-size: 0.85em;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+}
+.post-content figcaption:not(:empty)::before { content: "（"; }
+.post-content figcaption:not(:empty)::after { content: "）"; }
+.post-content figcaption:empty { display: none; }
 .not-by-ai-badge { margin-top: 16px; }
 .not-by-ai-badge a { display: inline-block; }
 .not-by-ai-badge img { height: 42px; width: auto; max-width: 100%; border: 0; border-radius: 0; content-visibility: visible; }
@@ -665,12 +687,12 @@ pre { overflow-x: auto; }
 
  
 
-<content> <h2 id="前言">前言</h2>
+<content class="post-content"> <h2 id="前言">前言</h2>
 <p>记录下代码0基础的blog搭建步骤，和（成功/想要）实现的功能。</p>
 <details>
   <summary>碎碎念，点击展开</summary>
   <p>1.零基础搭自己的blog网站很难。经常为了实现一个功能搜很多文章+AI老师反复修改。一个晚上能改好一个功能很不容易，当然也很棒。</p>
-<p>2.为什么要建自己的blog有好几个原因。第一，觉得有自己的博客很酷；第二，看了<a href="https://blog.douchi.space/2023-why-you-need-a-blog/#gsc.tab=0" rel="noopener noreferrer">椒盐豆豉老师的文章</a>
+<p>2.为什么要建自己的blog有好几个原因。第一，觉得有自己的博客很酷；第二，看了<a href="https://blog.douchi.space/2023-why-you-need-a-blog/#gsc.tab=0" target="_blank" rel="noopener noreferrer">椒盐豆豉老师的文章</a>
 ，总结回顾和塑造自己；第三，工作是转码，提前用自己感兴趣的方式接触下代码；第四，想要在一个不受审查和算法的地方生长……</p>
 <p>3.第一篇文章大概花了一周时间来写，进度缓慢让我一度怀疑自己是不是又是3分钟热度。最近准备把博客的重点从装修转到多发点文章。</p>
 
@@ -690,9 +712,9 @@ pre { overflow-x: auto; }
 <p>4.装编辑器： 下载并安装VSCode，并在其 Command Palette 中安装 code 命令。
 具体步骤打开VSCode，点击view -&gt; Command Palette&hellip;，输入 Shell Command: Install &lsquo;code&rsquo; command in PATH 并回车。</p>
 <h3 id="12创建网站">1.2创建网站</h3>
-<p>参考了<a href="https://gohugo.io/getting-started/quick-start/" rel="noopener noreferrer">Hugo官方指南</a>
-和<a href="https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-installation/" rel="noopener noreferrer">papermod主题的安装指南</a>
-，基本看这两个文档就没问题了。使用的theme是：<a href="https://themes.gohugo.io/themes/hugo-papermod/" rel="noopener noreferrer">papermod</a>
+<p>参考了<a href="https://gohugo.io/getting-started/quick-start/" target="_blank" rel="noopener noreferrer">Hugo官方指南</a>
+和<a href="https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-installation/" target="_blank" rel="noopener noreferrer">papermod主题的安装指南</a>
+，基本看这两个文档就没问题了。使用的theme是：<a href="https://themes.gohugo.io/themes/hugo-papermod/" target="_blank" rel="noopener noreferrer">papermod</a>
 。可以在hugo官网的主题中挑选自己喜欢的，每个主题的配置，稍微有些不同，请参考相关主题的教程。</p>
 <p>Step1 检查Hugo版本，需大于等于Hugo v0.146.0 <code>hugo version</code></p>
 <p>Step2 安装主题</p>
@@ -743,7 +765,7 @@ pre { overflow-x: auto; }
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>在terminal运行 <code>hugo server</code>，打开local的网址可以看到是空白的，接下来我们进行功能的设置。</p>
-<p>一个省事儿的方法，直接参考同样主题的yaml文件，复制黏贴，我的参考是<a href="https://github.com/xyming108/sulv-hugo-papermod" rel="noopener noreferrer">sulv</a>
+<p>一个省事儿的方法，直接参考同样主题的yaml文件，复制黏贴，我的参考是<a href="https://github.com/xyming108/sulv-hugo-papermod" target="_blank" rel="noopener noreferrer">sulv</a>
 。</p>
 <p>运行hugo server可以发现已经有了基础的架子了，下面是我自己想要的功能的具体操作和代码。可以一边修改代码，一边看local网页做出来的样子。</p>
 <h4 id="131修改post模版">1.3.1修改post模版</h4>
@@ -799,7 +821,7 @@ pre { overflow-x: auto; }
 <p>利用shortcode功能。在layouts/shortcodes新建并打开links.html，links.html负责定义单张卡片的html结构。放入内容。</p>
 <p>在assets/css/extended里新建links.css。css文件定义效果，放入代码。</p>
 <p>创建完成后在content/links.md加入内容</p>
-<p>具体代码请参考：<a href="https://github.com/xyming108/sulv-hugo-papermod" rel="noopener noreferrer">sulv</a>
+<p>具体代码请参考：<a href="https://github.com/xyming108/sulv-hugo-papermod" target="_blank" rel="noopener noreferrer">sulv</a>
 。</p>
 <h4 id="133-链接在新界面跳转并且外部链接后面会显示图标">1.3.3 链接在新界面跳转并且外部链接后面会显示图标</h4>
 <p>通过css代码可以非常简陋的实现这个功能。在assets里新建css/extended/custom.css，然后添加：</p>
@@ -869,7 +891,7 @@ pre { overflow-x: auto; }
 </div>
 </div><p>如果是第一次用 GitHub，它可能会弹出一个窗口让你输入账号密码。照做即可。注意密码是token，不是账号密码。</p>
 <p>STEP2部署到Netlify</p>
-<p>登录<a href="https://www.netlify.com/" rel="noopener noreferrer">Netlify</a>
+<p>登录<a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer">Netlify</a>
 ，点击 &ldquo;Add new site&rdquo; -&gt; &ldquo;Import an existing project&rdquo;。授权并选择 GitHub。在搜索框里选择刚才创建的仓库名。</p>
 <p>然后构建设置，Netlify 通常能自动识别 Hugo，但最好检查下面这几项，Branch: main，Build command: hugo &ndash;gc &ndash;minify，Publish directory: public</p>
 <p>最后设置环境变量。点击 &ldquo;Add environment variables&rdquo;。Key: HUGO_VERSION。Value: 0.154.2（填入自己的版本号）</p>
@@ -890,6 +912,32 @@ pre { overflow-x: auto; }
 <h2 id="3后续">3后续</h2>
 <p>还有很多想装修的地方，以后写别的post继续。</p>
  </content>
+<script>
+
+document.querySelectorAll('.post-content img[caption]').forEach((img) => {
+  const caption = img.getAttribute('caption').trim();
+  if (!caption) return;
+  let figure = img.closest('figure');
+  if (!figure) {
+    figure = document.createElement('figure');
+    
+    const parent = img.parentElement;
+    if (parent.tagName === 'P' && parent.childNodes.length === 1) {
+      parent.replaceWith(figure);
+    } else {
+      img.before(figure);
+    }
+    figure.append(img);
+  }
+  if (!figure.querySelector('figcaption')) {
+    const label = document.createElement('figcaption');
+    label.textContent = caption;
+    figure.append(label);
+  }
+  if (!img.alt) img.alt = caption;
+});
+</script>
+
 
 <p>
   
@@ -909,24 +957,24 @@ pre { overflow-x: auto; }
 
 <aside class="toc-nav" role="navigation" aria-label="目录">
   <nav id="TableOfContents">
-  <ol>
+  <ul>
     <li><a href="#前言">前言</a></li>
     <li><a href="#1步骤">1步骤</a>
-      <ol>
+      <ul>
         <li><a href="#11准备工作">1.1准备工作</a></li>
         <li><a href="#12创建网站">1.2创建网站</a></li>
         <li><a href="#13个性化主题">1.3个性化主题</a>
-          <ol>
+          <ul>
             <li><a href="#131修改post模版">1.3.1修改post模版</a></li>
             <li><a href="#132添加友链">1.3.2添加友链</a></li>
             <li><a href="#133-链接在新界面跳转并且外部链接后面会显示图标">1.3.3 链接在新界面跳转并且外部链接后面会显示图标</a></li>
-          </ol>
+          </ul>
         </li>
-      </ol>
+      </ul>
     </li>
     <li><a href="#2上线">2上线</a></li>
     <li><a href="#3后续">3后续</a></li>
-  </ol>
+  </ul>
 </nav>
 </aside>
 

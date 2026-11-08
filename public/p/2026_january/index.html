@@ -604,6 +604,28 @@
 <link rel="stylesheet" href="/scss/custom.css">
 <style>
 content { display: block; }
+.post-content figure { margin: 1.5rem auto; text-align: center; }
+.post-content img:not(.image-zoom-overlay img) {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(100%, 440px);
+  max-height: 55vh;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+}
+.post-content figcaption {
+  margin-top: 0.5rem;
+  color: color-mix(in srgb, var(--text-color-primary) 45%, var(--bg-color-primary));
+  font-size: 0.85em;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+}
+.post-content figcaption:not(:empty)::before { content: "（"; }
+.post-content figcaption:not(:empty)::after { content: "）"; }
+.post-content figcaption:empty { display: none; }
 .not-by-ai-badge { margin-top: 16px; }
 .not-by-ai-badge a { display: inline-block; }
 .not-by-ai-badge img { height: 42px; width: auto; max-width: 100%; border: 0; border-radius: 0; content-visibility: visible; }
@@ -659,7 +681,7 @@ pre { overflow-x: auto; }
 
  
 
-<content> <h2 id="heading">🍊</h2>
+<content class="post-content"> <h2 id="heading">🍊</h2>
 <p>1月吃的最多的水果是橘子。说到橘子脑海里浮现的是日剧里，一家人围坐在暖桌kotatsu边，暖桌上放的是橘子。来日本租的第一个房子也有暖桌，是当时花了500日元从即将搬家的学姐那儿买下来的。用那个暖桌和韩姐过圣诞节、吃烤肉，和楼上女生备考，吃火锅……一张有着美好回忆的桌子。</p>
 <p>搬来东京的时处理掉了那张桌子，东京的房子小东西多，后来再也没有机会买一张kotatsu，遗憾。</p>
 <figure class="image-caption">
@@ -1055,7 +1077,7 @@ pre { overflow-x: auto; }
 </div>
 
 
-在b站看了<a href="https://www.bilibili.com/video/BV1xvqZBNEDv?spm_id_from=333.788.videopod.sections&vd_source=82d9b0e0a6d9a4e6302896065b0d695b" rel="noopener noreferrer">up主的解说</a>
+在b站看了<a href="https://www.bilibili.com/video/BV1xvqZBNEDv?spm_id_from=333.788.videopod.sections&vd_source=82d9b0e0a6d9a4e6302896065b0d695b" target="_blank" rel="noopener noreferrer">up主的解说</a>
 ，目前还没有更新完。能看出来成本挺低的，但确实是最近看过比较让人欣喜的国产剧了。主角团人人带脑子，故事的设定也很有意思。</p>
 <p>  
  
@@ -1344,6 +1366,32 @@ pre { overflow-x: auto; }
 <pre><code>这个月目前为止没有让我印象深刻的歌曲。
 </code></pre>
  </content>
+<script>
+
+document.querySelectorAll('.post-content img[caption]').forEach((img) => {
+  const caption = img.getAttribute('caption').trim();
+  if (!caption) return;
+  let figure = img.closest('figure');
+  if (!figure) {
+    figure = document.createElement('figure');
+    
+    const parent = img.parentElement;
+    if (parent.tagName === 'P' && parent.childNodes.length === 1) {
+      parent.replaceWith(figure);
+    } else {
+      img.before(figure);
+    }
+    figure.append(img);
+  }
+  if (!figure.querySelector('figcaption')) {
+    const label = document.createElement('figcaption');
+    label.textContent = caption;
+    figure.append(label);
+  }
+  if (!img.alt) img.alt = caption;
+});
+</script>
+
 
 <p>
   
@@ -1363,13 +1411,13 @@ pre { overflow-x: auto; }
 
 <aside class="toc-nav" role="navigation" aria-label="目录">
   <nav id="TableOfContents">
-  <ol>
+  <ul>
     <li><a href="#heading">🍊</a></li>
     <li><a href="#成就">🥇成就</a></li>
     <li><a href="#影视">📺影视</a></li>
     <li><a href="#书籍">📚书籍</a></li>
     <li><a href="#音乐">🎵音乐</a></li>
-  </ol>
+  </ul>
 </nav>
 </aside>
 

@@ -612,6 +612,28 @@
 <link rel="stylesheet" href="/scss/custom.css">
 <style>
 content { display: block; }
+.post-content figure { margin: 1.5rem auto; text-align: center; }
+.post-content img:not(.image-zoom-overlay img) {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(100%, 440px);
+  max-height: 55vh;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+}
+.post-content figcaption {
+  margin-top: 0.5rem;
+  color: color-mix(in srgb, var(--text-color-primary) 45%, var(--bg-color-primary));
+  font-size: 0.85em;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+}
+.post-content figcaption:not(:empty)::before { content: "（"; }
+.post-content figcaption:not(:empty)::after { content: "）"; }
+.post-content figcaption:empty { display: none; }
 .not-by-ai-badge { margin-top: 16px; }
 .not-by-ai-badge a { display: inline-block; }
 .not-by-ai-badge img { height: 42px; width: auto; max-width: 100%; border: 0; border-radius: 0; content-visibility: visible; }
@@ -667,34 +689,60 @@ pre { overflow-x: auto; }
 
  
 
-<content> <p>0.前提</p>
+<content class="post-content"> <p>0.前提</p>
 <p>不是从0到拿到高才的教程，是我自己申请日本高才的记录。</p>
-<p>日本的高度人才是什么？<a href="https://www.moj.go.jp/isa/applications/resources/newimmiact_3_system_index.html" rel="noopener noreferrer">「高度専門職」</a>
+<p>日本的高度人才是什么？<a href="https://www.moj.go.jp/isa/applications/resources/newimmiact_3_system_index.html" target="_blank" rel="noopener noreferrer">「高度専門職」</a>
 ，中文语境大家简称，高才。高才签证是日本政府为积极接收国外的高度专职人才而设立的制度。为高才持有者给予优待政策，5年在留期间、更快取得永驻、配偶可以工作、满足条件可携带父母和佣人等。但是高材是和公司绑定的，如果持有高才签证跳槽需要同时更换签证，而日本普通的工签不需要。</p>
 <p>我为什么要申请高才？简而言之是为了申请日本的永驻（PR）。去年政府新规取消了3年期的在留资格可以申请永驻的规定。要申请永驻，需要满足5年的在留期间要求。高才签是必选项。</p>
-<p>怎么申请高才签？<a href="https://www.moj.go.jp/isa/applications/resources/newimmiact_3_evaluate_index.html" rel="noopener noreferrer">打分制度</a>
+<p>怎么申请高才签？<a href="https://www.moj.go.jp/isa/applications/resources/newimmiact_3_evaluate_index.html" target="_blank" rel="noopener noreferrer">打分制度</a>
 。满足年收入300万日元以上且在评分表得分高于70分便可以申请</p>
 <p>1.准备工作</p>
 <p>通过打分表计算自己的分数和需要准备的材料。我用官网的 excel表格来计算的，满足要求的是学历、年收、年龄、日本大学毕业、日语n1、加分大学这几项。
 从工签更换高度人才，申请的对应资格是高度专门·技术活动「高度専門職1号(ロ)」。</p>
-<p>2.<a href="https://www.moj.go.jp/isa/applications/status/designatedactivities02_00004.html" rel="noopener noreferrer">需要的材料</a>
+<p>2.<a href="https://www.moj.go.jp/isa/applications/status/designatedactivities02_00004.html" target="_blank" rel="noopener noreferrer">需要的材料</a>
 </p>
 <p>（必须提交类）</p>
 <p>在留資格変更許可申請書</p>
 <p>写真</p>
-<p>行おうとする活動に応じた在留資格の<a href="https://www.moj.go.jp/isa/applications/status/gijinkoku.html" rel="noopener noreferrer">提出資料</a>
+<p>行おうとする活動に応じた在留資格の<a href="https://www.moj.go.jp/isa/applications/status/gijinkoku.html" target="_blank" rel="noopener noreferrer">提出資料</a>
 （现有的在留资格的证明材料）</p>
 <p>ポイント計算表
-<a href="https://www.moj.go.jp/isa/content/001419077.pdf" rel="noopener noreferrer">ポイント計算表の各項目に関する疎明資料</a>
+<a href="https://www.moj.go.jp/isa/content/001419077.pdf" target="_blank" rel="noopener noreferrer">ポイント計算表の各項目に関する疎明資料</a>
 </p>
 <p>（必须提示类）</p>
 <p>パスポート及び在留カード</p>
 <p>3.线上申请</p>
-<p>通过<a href="https://www.rasens-immi.moj.go.jp/rasens-u/offer/offerList_initDisplay" rel="noopener noreferrer">入管局线上申请系统</a>
-进行申请。在进行正式申请之前需要先申请使用这个系统，申请方法我参考了<a href="https://www.xiaohongshu.com/discovery/item/69b29e3a000000002603c84b?source=webshare&xhsshare=pc_web&xsec_token=ABofP5VersFtRHtAfdezwgDZK82degIu9axmRb3fpfGyc=&xsec_source=pc_share" rel="noopener noreferrer">小红书博主的帖子</a>
+<p>通过<a href="https://www.rasens-immi.moj.go.jp/rasens-u/offer/offerList_initDisplay" target="_blank" rel="noopener noreferrer">入管局线上申请系统</a>
+进行申请。在进行正式申请之前需要先申请使用这个系统，申请方法我参考了<a href="https://www.xiaohongshu.com/discovery/item/69b29e3a000000002603c84b?source=webshare&xhsshare=pc_web&xsec_token=ABofP5VersFtRHtAfdezwgDZK82degIu9axmRb3fpfGyc=&xsec_source=pc_share" target="_blank" rel="noopener noreferrer">小红书博主的帖子</a>
 。把2里需要上传的材料全部扫描成PDF上传到申请页面。扫描文件只能一个一个的上传（好蠢的系统）。注意，上传的文件大小合计不能超过25MB。像我一样用iPhone扫描文档的话，基本会8～9M，上传了一半收到警告，不得不重新上传一遍。</p>
 <p>下次见！</p>
  </content>
+<script>
+
+document.querySelectorAll('.post-content img[caption]').forEach((img) => {
+  const caption = img.getAttribute('caption').trim();
+  if (!caption) return;
+  let figure = img.closest('figure');
+  if (!figure) {
+    figure = document.createElement('figure');
+    
+    const parent = img.parentElement;
+    if (parent.tagName === 'P' && parent.childNodes.length === 1) {
+      parent.replaceWith(figure);
+    } else {
+      img.before(figure);
+    }
+    figure.append(img);
+  }
+  if (!figure.querySelector('figcaption')) {
+    const label = document.createElement('figcaption');
+    label.textContent = caption;
+    figure.append(label);
+  }
+  if (!img.alt) img.alt = caption;
+});
+</script>
+
 
 <p>
   

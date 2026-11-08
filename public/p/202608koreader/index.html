@@ -605,6 +605,28 @@
 <link rel="stylesheet" href="/scss/custom.css">
 <style>
 content { display: block; }
+.post-content figure { margin: 1.5rem auto; text-align: center; }
+.post-content img:not(.image-zoom-overlay img) {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(100%, 440px);
+  max-height: 55vh;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+}
+.post-content figcaption {
+  margin-top: 0.5rem;
+  color: color-mix(in srgb, var(--text-color-primary) 45%, var(--bg-color-primary));
+  font-size: 0.85em;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+}
+.post-content figcaption:not(:empty)::before { content: "（"; }
+.post-content figcaption:not(:empty)::after { content: "）"; }
+.post-content figcaption:empty { display: none; }
 .not-by-ai-badge { margin-top: 16px; }
 .not-by-ai-badge a { display: inline-block; }
 .not-by-ai-badge img { height: 42px; width: auto; max-width: 100%; border: 0; border-radius: 0; content-visibility: visible; }
@@ -660,7 +682,7 @@ pre { overflow-x: auto; }
 
  
 
-<content> <details>
+<content class="post-content"> <details>
   <summary>碎碎念</summary>
   <p>最近用微信读书app看书感觉很方便，不需要去网站下载直接搜索书名就可以看。为了更大的屏幕和护眼，更想用电子书阅读器来看。本来打算买国产的电子书阅读器，看了大家的对比，再加上不信任国产厂商的质量把控，还是决定用我手里的kindle。于是搜了一些攻略把手头最新固件版本的kindle pw6进行了越狱。</p>
 <p>升级之前在某书搜相关的内容，看大家的评论出现不少错误，以为会很麻烦。实际自己动手大概一小时搞定。</p>
@@ -668,25 +690,51 @@ pre { overflow-x: auto; }
 </details>
 <p>网上的攻略写的非常详细，我在下面贴一下我的越狱流程和参考教程。</p>
 <p>0.准备工作：</p>
-<p>・一台电脑，我用的是MacBook。Kindle连接macOS需要使用<a href="https://www.amazon.com/sendtokindle/mac" rel="noopener noreferrer">USB File Manage</a>
+<p>・一台电脑，我用的是MacBook。Kindle连接macOS需要使用<a href="https://www.amazon.com/sendtokindle/mac" target="_blank" rel="noopener noreferrer">USB File Manage</a>
 。</p>
 <p>・确认kindle的版本。我的版本是Kindle pw6，官方的名字是Kindle Paperwhite 12generation。</p>
 <p>1.进行越狱</p>
-<p>参考的是<a href="https://bookfere.com/post/1193.html" rel="noopener noreferrer">书伴网的教程</a>
+<p>参考的是<a href="https://bookfere.com/post/1193.html" target="_blank" rel="noopener noreferrer">书伴网的教程</a>
 ，非常详细，感谢书伴。</p>
 <p>2.安装插件，koreader。</p>
-<p>最新版本的是自动安装了包插件可以不用额外下载。但我最开始没理解什么意思，参考了<a href="https://bookfere.com/post/311.html" rel="noopener noreferrer">插件下载的教程</a>
+<p>最新版本的是自动安装了包插件可以不用额外下载。但我最开始没理解什么意思，参考了<a href="https://bookfere.com/post/311.html" target="_blank" rel="noopener noreferrer">插件下载的教程</a>
 ，重新下载了包管理插件。装好包管理插件就可以下载安装koreader了。</p>
 <p>2-1安装koreader插件：微信读书</p>
-<p>微信读书是在koreader上运行的，所以要先安装好koreader之后再安装微信读书。使用了finlater大佬的开源项目，有<a href="https://github.com/finlater/weread.koplugin" rel="noopener noreferrer">中文版的安装教程</a>
+<p>微信读书是在koreader上运行的，所以要先安装好koreader之后再安装微信读书。使用了finlater大佬的开源项目，有<a href="https://github.com/finlater/weread.koplugin" target="_blank" rel="noopener noreferrer">中文版的安装教程</a>
 。</p>
 <p>2-2安装koreader插件：SimpleUI</p>
-<p>原装版的koreader操作性上并不算优秀，在微信阅读的教程里发现有这个<a href="https://github.com/doctorhetfield-cmd/simpleui.koplugin" rel="noopener noreferrer">插件</a>
+<p>原装版的koreader操作性上并不算优秀，在微信阅读的教程里发现有这个<a href="https://github.com/doctorhetfield-cmd/simpleui.koplugin" target="_blank" rel="noopener noreferrer">插件</a>
 。在installation部分有详细的安装方法。注意下载完code之后文件名字是simpleui.koplugin-main，需要改成simpleui.koplugin，这样拷贝到kindle根目录中才能显示。</p>
 <hr>
 <p>Huge thanks to all the devs!</p>
 <p>and see you again</p>
  </content>
+<script>
+
+document.querySelectorAll('.post-content img[caption]').forEach((img) => {
+  const caption = img.getAttribute('caption').trim();
+  if (!caption) return;
+  let figure = img.closest('figure');
+  if (!figure) {
+    figure = document.createElement('figure');
+    
+    const parent = img.parentElement;
+    if (parent.tagName === 'P' && parent.childNodes.length === 1) {
+      parent.replaceWith(figure);
+    } else {
+      img.before(figure);
+    }
+    figure.append(img);
+  }
+  if (!figure.querySelector('figcaption')) {
+    const label = document.createElement('figcaption');
+    label.textContent = caption;
+    figure.append(label);
+  }
+  if (!img.alt) img.alt = caption;
+});
+</script>
+
 
 <p>
   

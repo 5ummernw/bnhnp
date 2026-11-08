@@ -595,6 +595,32 @@
 <link rel="stylesheet" href="/scss/custom.css">
 <style>
 content { display: block; }
+.about-content #-milestones {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+}
+.about-content #-milestones + ul {
+  list-style: none;
+  padding-left: 0;
+}
+.about-content #-milestones + ul li {
+  margin: 0 0 0.45rem;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+.about-content #-milestones + ul li strong:first-child {
+  display: inline-block;
+  color: #35618d;
+  font-size: 1.111111em;
+  font-weight: 500;
+  line-height: 1.7;
+  white-space: nowrap;
+}
+@media (prefers-color-scheme: dark) {
+  .about-content #-milestones + ul li strong:first-child {
+    color: #bdd8f3;
+  }
+}
 .post-content figure { margin: 1.5rem auto; text-align: center; }
 .post-content img:not(.image-zoom-overlay img) {
   display: block;

@@ -14,7 +14,7 @@
 {{ end }}
 {{ end }} 
 
-<content{{ if eq .Section "post" }} class="post-content"{{ end }}> {{ .Content }} </content>
+<content{{ if eq .Section "post" }} class="post-content"{{ else if eq .RelPermalink "/about/" }} class="about-content"{{ end }}> {{ .Content }} </content>
 {{ if eq .Section "post" }}{{ partial "post-images.html" . }}{{ end }}
 
 <p>
@@ -113,7 +113,8 @@
 {{ end }}
 
 <!-- Place the TOC at the end to ensure the article content loads first. -->
-{{ $tocEnabled := default .Site.Params.toc .Params.toc }}
+{{ $tocEnabled := .Site.Params.toc }}
+{{ if isset .Params "toc" }}{{ $tocEnabled = .Params.toc }}{{ end }}
 {{ if $tocEnabled }} 
 <div class="toc">
 {{ partial "toc.html" . }}

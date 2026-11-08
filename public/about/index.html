@@ -34,7 +34,7 @@
 
   <meta itemprop="name" content="About">
   <meta itemprop="description" content="自我介绍">
-  <meta itemprop="wordCount" content="79">
+  <meta itemprop="wordCount" content="209">
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
   <style>
@@ -597,6 +597,32 @@
 <link rel="stylesheet" href="/scss/custom.css">
 <style>
 content { display: block; }
+.about-content #-milestones {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+}
+.about-content #-milestones + ul {
+  list-style: none;
+  padding-left: 0;
+}
+.about-content #-milestones + ul li {
+  margin: 0 0 0.45rem;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+.about-content #-milestones + ul li strong:first-child {
+  display: inline-block;
+  color: #35618d;
+  font-size: 1.111111em;
+  font-weight: 500;
+  line-height: 1.7;
+  white-space: nowrap;
+}
+@media (prefers-color-scheme: dark) {
+  .about-content #-milestones + ul li strong:first-child {
+    color: #bdd8f3;
+  }
+}
 .post-content figure { margin: 1.5rem auto; text-align: center; }
 .post-content img:not(.image-zoom-overlay img) {
   display: block;
@@ -661,11 +687,19 @@ pre { overflow-x: auto; }
   <main>
  
 
-<content> <p>（本页建设中2026/10/27）</p>
+<content class="about-content"> <p>（本页建设中2026/10/27）</p>
 <p>summernightwind 夏夜晚风<br>
 是一个让人感到舒服的东西<br>
 在水里和在风里感觉相同，所以网站的头像是在水里的鳐鱼Ray</p>
 <p>“人群是一个幻觉。它并不存在。”</p>
+<h3 id="-milestones">🏁 Milestones</h3>
+<ul>
+<li><strong>2026.10.27</strong>　使用Codex，更换主题为Bear Neo。标签、图片显示进行了美化。</li>
+<li><strong>2026.10.20</strong>　第一次用 AI Agent，让Codex给博客加上运行时间。</li>
+<li><strong>2026.04.04</strong>　购买了域名 summernw33，并设置了网站头像。</li>
+<li><strong>2026.03.23</strong>　更换了博客主题，切换成 Stack。</li>
+<li><strong>2026.01.09</strong>　手搓了个人网站，主题是 PaperMod。</li>
+</ul>
  </content>
 
 
@@ -679,12 +713,7 @@ pre { overflow-x: auto; }
 
 
 
- 
-<div class="toc">
 
-
-
-</div>
 
 
 
